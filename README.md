@@ -4,11 +4,11 @@
 ##### Ürünümüz çiftçilerin direkt tüketiciye satış yapmasına imkan veriyor.
 
 ## Takım Elemanları
-- Bahattin Kutay
-- Betül Sude Bayraktar
-- Büşra Şen
-- Ece Büyükarıkan
-- Esra Kantarcı Çayır
+- Bahattin Kutay - Project Manager
+- Betül Sude Bayraktar - Scrum Master
+- Büşra Şen - Developer
+- Ece Büyükarıkan - Developer
+- Esra Kantarcı Çayır - Developer
 
 ## Ürün İsmi: KOMŞU PAZAR
  Araya başka aracı girmeksizin çiftçilerin ürünlerini direkt olarak satabilecekleri, ürünlerini direkt son tüketiciyle yahut satın almak isteyen işyerleri ile buluşturabilecekleri temiz ve sade bir e-ticaret platformu.
