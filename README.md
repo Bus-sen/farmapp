@@ -1,7 +1,7 @@
-# KOMŞUPAZAR
+# KOMŞU PAZAR
 ## GRUP  174
 
-##### Ürünümüz çiftçilerin direkt tüketiciye satış yapmasına imkan veriyor.
+##### Ürünümüz çiftçilerin son tüketiciye direkt satış yapmasına imkan veren bir Flutter uygulamasıdır.
 
 ## Takım Elemanları
 - Bahattin Kutay - Project Manager
@@ -13,8 +13,9 @@
 ## Ürün İsmi: KOMŞU PAZAR
  Araya başka aracı girmeksizin çiftçilerin ürünlerini direkt olarak satabilecekleri, ürünlerini direkt son tüketiciyle yahut satın almak isteyen işyerleri ile buluşturabilecekleri temiz ve sade bir e-ticaret platformu.
 ## Hedef Kitle
--Ev haneleri ve meyve/sebze alacak iş yerleri
--15 yaş ve üzeri tüm kullanıcılar
+- Ev haneleri ve meyve/sebze alacak iş yerleri
+- Mahsüllerini satmak isteyen çiftçiler
+- 15 yaş ve üzeri tüm kullanıcılar
 
 ## Sprintin Durumu
 - Takımdaki kişilerin rolleri belirlendi.
