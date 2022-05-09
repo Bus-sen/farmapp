@@ -33,3 +33,5 @@
 
 ## Diğer Notlar
 - Bir sonraki sprinte kadar wireframe tasarımları ortaya çıkararak UI design’a başlanmalı.
+
+09.05.2022
