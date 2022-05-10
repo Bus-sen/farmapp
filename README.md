@@ -4,7 +4,7 @@
 ##### Ürünümüz çiftçilerin son tüketiciye direkt satış yapmasına imkan veren bir Flutter uygulamasıdır.
 
 ## Takım Elemanları
-- Bahattin Kutay - Project Manager
+- Bahattin Kutay - Product Owner
 - Betül Sude Bayraktar - Scrum Master
 - Büşra Şen - Developer
 - Ece Büyükarıkan - Developer
