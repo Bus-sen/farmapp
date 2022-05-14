@@ -2,6 +2,7 @@
 
 import 'package:farmapp/pages/home/product_page.dart';
 import 'package:farmapp/utils/colors.dart';
+import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/semi_big_text.dart';
@@ -51,7 +52,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             )
                           ],
                         ),
-                        Row(
+                        /*Row(
                           children: [
                             NormalText(text: "Komşu Ayşe Teyze"),
                             Icon(
@@ -59,7 +60,7 @@ class _MainHomePageState extends State<MainHomePage> {
                               color: AppColors.colorTextPrimary,
                             ),
                           ],
-                        )
+                        )*/
                       ],
                     ),
                     Center(
@@ -67,7 +68,7 @@ class _MainHomePageState extends State<MainHomePage> {
                         width: 40,
                         height: 40,
                         child: Icon(Icons.search,
-                            color: AppColors.colorTextPrimary),
+                            color: Colors.white, size: Dimensions.iconSize20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: AppColors.colorPrimary,
@@ -77,17 +78,11 @@ class _MainHomePageState extends State<MainHomePage> {
                   ],
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white30),
-                child: Column(
-                  children: [
-                    BigText(
-                        text: "Öne Çıkanlar",
-                        color: AppColors.colorTextPrimary),
-                    ProductPageBody(),
-                  ],
+
+              BigText(text: "Öne Çıkanlar", color: AppColors.colorTextPrimary),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: ProductPageBody(),
                 ),
               ),
             ],
