@@ -1,5 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_new
 
+import 'package:dots_indicator/dots_indicator.dart';
+import 'dart:developer';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/icon_text.dart';
@@ -20,107 +22,178 @@ class ProductPageBody extends StatefulWidget {
 class _ProductPageBodyState extends State<ProductPageBody> {
   PageController pageController = PageController(viewportFraction: 0.75);
 
+  //dbestech referansı, 1.50 civarı, birisi slider'ı düzgün
+  //implemente etmeli, ama zaruri değil, mvp yapıyoruz:
+  var _currPageValue = 0.0;
+  double _scaleFactor = 0.8;
+
+  @override
+  void initState() {
+    //current page value'yu alacağız
+    super.initState();
+    //! koymak onun null olamayacağını gösterecek
+    pageController.addListener(() {
+      setState(() {
+        _currPageValue = pageController.page!;
+        // tamam çalışıyor.
+        //log("curr page: " + _currPageValue.toString());
+      });
+    });
+  }
+
+//sayfadan çıkınca dispose etmen lazım
+  @override
+  void dispose() {
+    pageController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // TODO: heightlar hardcoded olmamalı
-      height: 320,
-      child: PageView.builder(
-        //şimdilik 5 tane yukarıda item gösterelim
-        controller: pageController,
+    return Column(
+      children: [
+        Container(
+          // TODO: heightlar hardcoded olmamalı
+          height: 320,
+          child: PageView.builder(
+            //şimdilik 5 tane yukarıda item gösterelim
+            controller: pageController,
 
-        itemCount: 5,
+            itemCount: 5,
 
-        //indeximiz position
-        itemBuilder: (context, position) {
-          return _buildPageItem(position);
-        },
-      ),
+            //indeximiz position
+            itemBuilder: (context, position) {
+              return _buildPageItem(position);
+            },
+          ),
+        ),
+        new DotsIndicator(
+          dotsCount: 5,
+          position: _currPageValue,
+          decorator: DotsDecorator(
+            size: const Size.square(9.0),
+            activeSize: const Size(18.0, 9.0),
+            activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)),
+          ),
+        ),
+      ],
     );
   }
 
   Widget _buildPageItem(int position) {
-    return Stack(
-      children: [
-        Container(
-          height: 250,
-          margin: EdgeInsets.only(left: 5, right: 5),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/images/karpuz.jpg")),
+    Matrix4 matrix = new Matrix4.identity();
 
-              //renkleri düzgün seçelim
-              color: position.isEven
-                  ? Color.fromARGB(255, 174, 207, 136)
-                  : Color.fromARGB(255, 99, 129, 65)),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            height: 120,
-            margin: EdgeInsets.only(left: 45, right: 45, bottom: 15),
+    if (position == _currPageValue.floor()) {
+      var currScale = 1 - (_currPageValue - position) * (1 - _scaleFactor);
+
+      matrix = Matrix4.diagonal3Values(1, currScale, 1);
+    } else if (position == _currPageValue.floor() + 1) {
+      var currScale =
+          _scaleFactor + (_currPageValue - position + 1) * (1 - _scaleFactor);
+      matrix = Matrix4.diagonal3Values(1, currScale, 1);
+    } else {
+      var currScale = 0.8;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1);
+    }
+
+    return Transform(
+      transform: matrix,
+      child: Stack(
+        children: [
+          Container(
+            height: 250,
+            margin: EdgeInsets.only(left: 5, right: 5),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              //renkleri düzgün seçelim
-              color: Colors.white,
-            ),
-            child: Container(
-              padding: EdgeInsets.only(top: 15, left: 15, right: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  BigText(text: "Karpuz"),
-                  SizedBox(height: 10),
-                  Row(
-                    // TODO: sized box widget yapalım sürekli kullanmalık
+                borderRadius: BorderRadius.circular(30),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assets/images/karpuz.jpg")),
 
-                    children: [
-                      Wrap(
-                        children: List.generate(
-                            5,
-                            (index) => Icon(Icons.star,
-                                size: 12, color: AppColors.colorPrimary)),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      SmallText(text: "5"),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      SmallText(text: "122"),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      SmallText(text: "yorum")
-                    ],
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    children: [
-                      IconTextWidget(
-                        icon: Icons.circle_sharp,
-                        text: "Meyve",
-                        iconColor: AppColors.colorPrimary,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      IconTextWidget(
-                        icon: Icons.location_pin,
-                        text: "Serik",
-                        iconColor: AppColors.colorStarted,
-                      )
-                    ],
-                  ),
-                ],
+                //renkleri düzgün seçelim
+                color: position.isEven
+                    ? Color.fromARGB(255, 174, 207, 136)
+                    : Color.fromARGB(255, 99, 129, 65),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFFe8e8e8),
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                  )
+                ]),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 120,
+              margin: EdgeInsets.only(left: 45, right: 45, bottom: 15),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  //renkleri düzgün seçelim
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xFFe8e8e8),
+                      blurRadius: 1.0,
+                      offset: Offset(0, 5),
+                    )
+                  ]),
+              child: Container(
+                padding: EdgeInsets.only(top: 15, left: 15, right: 25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    BigText(text: "Karpuz"),
+                    SizedBox(height: 10),
+                    Row(
+                      // TODO: sized box widget yapalım sürekli kullanmalık
+
+                      children: [
+                        Wrap(
+                          children: List.generate(
+                              5,
+                              (index) => Icon(Icons.star,
+                                  size: 12, color: AppColors.colorPrimary)),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        SmallText(text: "4.9"),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SmallText(text: "122"),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        SmallText(text: "yorum")
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconTextWidget(
+                          icon: Icons.circle_sharp,
+                          text: "Meyve",
+                          iconColor: AppColors.colorPrimary,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        IconTextWidget(
+                          icon: Icons.location_pin,
+                          text: "Serik",
+                          iconColor: AppColors.colorPrimary,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

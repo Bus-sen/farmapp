@@ -17,7 +17,7 @@ class NormalText extends StatelessWidget {
       this.color = const Color(0xFF33691E),
       required this.text,
       this.height = 1.2,
-      this.size = 12,
+      this.size = 15,
       this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 
@@ -28,6 +28,7 @@ class NormalText extends StatelessWidget {
       overflow: overFlow,
       style: TextStyle(
         fontSize: size,
+        fontWeight: FontWeight.w500,
         color: color,
         // TODO: add font family to pubspec yaml of your choice
       ),

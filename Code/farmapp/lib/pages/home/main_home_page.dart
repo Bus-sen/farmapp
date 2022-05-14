@@ -3,6 +3,7 @@ import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/semi_big_text.dart';
+import 'package:farmapp/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -36,29 +37,33 @@ class _MainHomePageState extends State<MainHomePage> {
                       children: [
                         Row(
                           children: [
-                            BigText(
-                              text: 'Şehir: ',
-                            ),
                             BigText(text: "Antalya"),
-                            Icon(Icons.arrow_drop_down)
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.arrow_drop_down,
+                              color: AppColors.colorPrimary,
+                            )
                           ],
                         ),
                         Row(
                           children: [
-                            NormalText(
-                              text: "Satıcı:",
-                            ),
                             NormalText(text: "Komşu Ayşe Teyze"),
-                            Icon(Icons.arrow_drop_down),
+                            Icon(
+                              Icons.arrow_drop_down,
+                              color: AppColors.colorTextPrimary,
+                            ),
                           ],
                         )
                       ],
                     ),
                     Center(
                       child: Container(
-                        width: 45,
-                        height: 45,
-                        child: Icon(Icons.search, color: Colors.black),
+                        width: 40,
+                        height: 40,
+                        child: Icon(Icons.search,
+                            color: AppColors.colorTextPrimary),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: AppColors.colorPrimary,
