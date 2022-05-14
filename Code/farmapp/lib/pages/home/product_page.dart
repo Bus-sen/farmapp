@@ -34,6 +34,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
       margin: EdgeInsets.only(left: 5, right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
+          image: DecorationImage(image: AssetImage("assets/karpuz.jpg")),
 
           //renkleri düzgün seçelim
           color: position.isEven
