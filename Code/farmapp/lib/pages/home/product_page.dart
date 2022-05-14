@@ -3,6 +3,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'dart:developer';
 import 'package:farmapp/utils/colors.dart';
+import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/icon_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
@@ -26,6 +27,8 @@ class _ProductPageBodyState extends State<ProductPageBody> {
   //implemente etmeli, ama zaruri değil, mvp yapıyoruz:
   var _currPageValue = 0.0;
   double _scaleFactor = 0.8;
+  double _height = Dimensions.pageViewContainer;
+  double _heightText = Dimensions.pageViewTextContainer;
 
   @override
   void initState() {
@@ -53,7 +56,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
       children: [
         Container(
           // TODO: heightlar hardcoded olmamalı
-          height: 320,
+          height: _height * 1.3,
           child: PageView.builder(
             //şimdilik 5 tane yukarıda item gösterelim
             controller: pageController,
@@ -101,18 +104,19 @@ class _ProductPageBodyState extends State<ProductPageBody> {
       child: Stack(
         children: [
           Container(
-            height: 250,
+            height: _height,
             margin: EdgeInsets.only(left: 5, right: 5),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/karpuz.jpg")),
-
+                color: Colors.white,
                 //renkleri düzgün seçelim
-                color: position.isEven
+                /* color: position.isEven
                     ? Color.fromARGB(255, 174, 207, 136)
                     : Color.fromARGB(255, 99, 129, 65),
+                    */
                 boxShadow: [
                   BoxShadow(
                     color: Color(0xFFe8e8e8),
@@ -124,7 +128,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 120,
+              height: _heightText,
               margin: EdgeInsets.only(left: 45, right: 45, bottom: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),

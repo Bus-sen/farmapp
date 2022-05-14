@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:farmapp/pages/home/product_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/big_text.dart';
@@ -21,6 +23,8 @@ class MainHomePage extends StatefulWidget {
 class _MainHomePageState extends State<MainHomePage> {
   @override
   Widget build(BuildContext context) {
+    print("Height: " + MediaQuery.of(context).size.height.toString());
+
     return Scaffold(
       body: SafeArea(
         child: Container(
