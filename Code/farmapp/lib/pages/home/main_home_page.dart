@@ -1,5 +1,6 @@
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/big_text.dart';
+import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/semi_big_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,12 +29,24 @@ class _MainHomePageState extends State<MainHomePage> {
                 children: [
                   Column(
                     children: [
-                      BigText(
-                        text: 'Şehir:',
+                      Row(
+                        children: [
+                          BigText(
+                            text: 'Şehir: ',
+                          ),
+                          BigText(text: "Antalya"),
+                          Icon(Icons.arrow_drop_down)
+                        ],
                       ),
-                      SemiBigText(
-                        text: "Satıcı:",
-                      ),
+                      Row(
+                        children: [
+                          NormalText(
+                            text: "Satıcı: ",
+                          ),
+                          NormalText(text: "Komşu Ayşe Teyze"),
+                          Icon(Icons.arrow_drop_down),
+                        ],
+                      )
                     ],
                   ),
                   Center(
