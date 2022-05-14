@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../../widgets/header.dart';
+
 class MainHomePage extends StatefulWidget {
   const MainHomePage({Key? key}) : super(key: key);
 
@@ -19,53 +21,68 @@ class _MainHomePageState extends State<MainHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 45, bottom: 15),
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          BigText(
-                            text: 'Şehir: ',
-                          ),
-                          BigText(text: "Antalya"),
-                          Icon(Icons.arrow_drop_down)
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          NormalText(
-                            text: "Satıcı:",
-                          ),
-                          NormalText(text: "Komşu Ayşe Teyze"),
-                          Icon(Icons.arrow_drop_down),
-                        ],
-                      )
-                    ],
-                  ),
-                  Center(
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      child: Icon(Icons.search, color: Colors.black),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: AppColors.colorPrimary,
-                      ),
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            children: [
+              Header(),
+              Container(
+                margin: EdgeInsets.only(top: 15, bottom: 15),
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            BigText(
+                              text: 'Şehir: ',
+                            ),
+                            BigText(text: "Antalya"),
+                            Icon(Icons.arrow_drop_down)
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            NormalText(
+                              text: "Satıcı:",
+                            ),
+                            NormalText(text: "Komşu Ayşe Teyze"),
+                            Icon(Icons.arrow_drop_down),
+                          ],
+                        )
+                      ],
                     ),
-                  )
-                ],
+                    Center(
+                      child: Container(
+                        width: 45,
+                        height: 45,
+                        child: Icon(Icons.search, color: Colors.black),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: AppColors.colorPrimary,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            ProductPageBody(),
-          ],
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.white30),
+                child: Column(
+                  children: [
+                    BigText(
+                        text: "Öne Çıkanlar",
+                        color: AppColors.colorTextPrimary),
+                    ProductPageBody(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

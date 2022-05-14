@@ -7,7 +7,7 @@ class AppColors {
   // Primary Color
   static const Color colorPrimary = Color(0xFF7CB342);
   static const Color colorSecondary = Color(0xFF9CCC65);
-  static const Color colorCardColors = Color.fromARGB(255, 183, 199, 165);
+  static const Color colorCardColors = Color.fromARGB(255, 195, 218, 169);
   static const Color colorTextPrimary = Color(0xFF33691E);
 
   // Light Color
