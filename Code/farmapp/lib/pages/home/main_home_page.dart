@@ -25,7 +25,7 @@ class _MainHomePageState extends State<MainHomePage> {
         child: Container(
           child: Column(
             children: [
-              Header(),
+              //Header(),
               Container(
                 margin: EdgeInsets.only(top: 15, bottom: 15),
                 padding: EdgeInsets.only(left: 20, right: 20),

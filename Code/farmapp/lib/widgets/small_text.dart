@@ -3,19 +3,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class BigText extends StatelessWidget {
+class SmallText extends StatelessWidget {
   final Color? color; //optional
   final String text;
   double size;
   TextOverflow overFlow;
+  double height;
 
-  BigText(
+  SmallText(
       {Key? key,
       // TODO: add hexadecimal main color for bigger texts and titles
       // to here, not to AppColors.
-      this.color = const Color(0xFF7CB342),
+      this.color = const Color(0xFF33691E),
       required this.text,
-      this.size = 20,
+      this.height = 1.2,
+      this.size = 12,
       this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 
@@ -26,8 +28,8 @@ class BigText extends StatelessWidget {
       overflow: overFlow,
       style: TextStyle(
         fontSize: size,
-        color: color,
         fontWeight: FontWeight.w400,
+        color: color,
         // TODO: add font family to pubspec yaml of your choice
       ),
     );
