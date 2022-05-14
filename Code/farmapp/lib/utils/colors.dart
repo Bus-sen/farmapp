@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Please change these colors according to your choice of UI
+  // TODO: Please change these colors according to your choice of UI
   // We still do not have UI designs.
 
   // Primary Color
-  static const Color colorPrimary = Color(0xFF7CB342);
-  static const Color colorSecondary = Color(0xFF9CCC65);
+  //static const Color colorPrimary = Color(0xFF7CB342);
+
+  static const Color colorPrimary = Color.fromARGB(255, 231, 70, 7);
+  static const Color colorSecondary = Color.fromARGB(255, 231, 70, 7);
   static const Color colorCardColors = Color.fromARGB(255, 195, 218, 169);
   static const Color colorTextPrimary = Color(0xFF33691E);
 

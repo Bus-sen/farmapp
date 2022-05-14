@@ -103,7 +103,9 @@ class _ProductPageBodyState extends State<ProductPageBody> {
               itemBuilder: (context, index) {
                 return Container(
                   margin: EdgeInsets.only(
-                      left: Dimensions.width20, right: Dimensions.width20),
+                      left: Dimensions.width20,
+                      right: Dimensions.width20,
+                      bottom: Dimensions.height10),
                   child: Row(children: [
                     Container(
                       width: 120,
@@ -113,8 +115,19 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                             BorderRadius.circular(Dimensions.radius20),
                         color: Colors.white38,
                         image: DecorationImage(
-                          image: AssetImage("assets/images/domat.jpg"),
+                          image: AssetImage("assets/images/biber.jpg"),
                         ),
+                      ),
+                    ),
+                    Container(
+                      width: 200,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(Dimensions.radius20),
+                          bottomRight: Radius.circular(Dimensions.radius20),
+                        ),
+                        color: Colors.white,
                       ),
                     ),
                   ]),
@@ -191,8 +204,6 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                     BigText(text: "Karpuz"),
                     SizedBox(height: 10),
                     Row(
-                      // TODO: sized box widget yapalım sürekli kullanmalık
-
                       children: [
                         Wrap(
                           children: List.generate(
