@@ -1,3 +1,4 @@
+import 'package:farmapp/pages/home/product_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
@@ -41,7 +42,7 @@ class _MainHomePageState extends State<MainHomePage> {
                       Row(
                         children: [
                           NormalText(
-                            text: "Satıcı: ",
+                            text: "Satıcı:",
                           ),
                           NormalText(text: "Komşu Ayşe Teyze"),
                           Icon(Icons.arrow_drop_down),
@@ -63,6 +64,7 @@ class _MainHomePageState extends State<MainHomePage> {
                 ],
               ),
             ),
+            ProductPageBody(),
           ],
         ),
       ),
