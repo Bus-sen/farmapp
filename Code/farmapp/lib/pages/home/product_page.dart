@@ -97,6 +97,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
 
         // tezgah listesi:
 
+        //3.16'daki işlemi yapmadık
         Container(
           child: ListView.builder(
               physics: NeverScrollableScrollPhysics(),
@@ -110,8 +111,8 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                       bottom: Dimensions.height10),
                   child: Row(children: [
                     Container(
-                      height: 120,
-                      width: 120,
+                      height: Dimensions.listViewImgSize,
+                      width: Dimensions.listViewImgSize,
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.circular(Dimensions.radius20),
@@ -123,8 +124,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                     ),
                     Expanded(
                       child: Container(
-                        height: 100,
-                        width: 200,
+                        height: Dimensions.listViewTextContainerSize,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(Dimensions.radius20),
@@ -285,7 +285,15 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                           icon: Icons.location_pin,
                           text: "Serik",
                           iconColor: AppColors.colorPrimary,
-                        )
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        IconTextWidget(
+                          icon: Icons.monetization_on_sharp,
+                          text: "24 TL",
+                          iconColor: AppColors.colorPrimary,
+                        ),
                       ],
                     ),
                   ],
