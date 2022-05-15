@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_new
 
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:farmapp/pages/home/main_home_page.dart';
 import 'dart:developer';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/utils/dimensions.dart';
@@ -86,14 +87,15 @@ class _ProductPageBodyState extends State<ProductPageBody> {
           margin: EdgeInsets.only(left: Dimensions.width30),
           child: Row(children: [
             BigText(
-              text: "Tezgah Detayları",
+              text: "Tezgah Listesi",
             ),
             SizedBox(
               width: Dimensions.width10,
             ),
           ]),
         ),
-        // tezgah içeriği:
+
+        // tezgah listesi:
 
         Container(
           child: ListView.builder(
@@ -108,8 +110,8 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                       bottom: Dimensions.height10),
                   child: Row(children: [
                     Container(
-                      width: 120,
                       height: 120,
+                      width: 120,
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.circular(Dimensions.radius20),
@@ -119,15 +121,57 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                         ),
                       ),
                     ),
-                    Container(
-                      width: 200,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(Dimensions.radius20),
-                          bottomRight: Radius.circular(Dimensions.radius20),
+                    Expanded(
+                      child: Container(
+                        height: 100,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(Dimensions.radius20),
+                            bottomRight: Radius.circular(Dimensions.radius20),
+                          ),
+                          color: Colors.white,
                         ),
-                        color: Colors.white,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: Dimensions.width10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              BigText(
+                                text: "Komşu Ayşe Tezgah'ın Elinden",
+                              ),
+                              SizedBox(
+                                height: Dimensions.height10,
+                              ),
+                              SmallText(
+                                  text:
+                                      "Antalya'da gün içi teslimat mümkündür"),
+                              SizedBox(
+                                height: Dimensions.height10,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  IconTextWidget(
+                                    icon: Icons.circle_sharp,
+                                    text: "Meyve",
+                                    iconColor: AppColors.colorPrimary,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  IconTextWidget(
+                                    icon: Icons.location_pin,
+                                    text: "Serik",
+                                    iconColor: AppColors.colorPrimary,
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ]),
