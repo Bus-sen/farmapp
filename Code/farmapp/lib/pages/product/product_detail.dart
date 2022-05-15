@@ -13,8 +13,8 @@ import '../../widgets/icon_text.dart';
 import '../../widgets/normal_text.dart';
 import '../../widgets/small_text.dart';
 
-class ProductDetail2 extends StatelessWidget {
-  const ProductDetail2({Key? key}) : super(key: key);
+class ProductDetail extends StatelessWidget {
+  const ProductDetail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

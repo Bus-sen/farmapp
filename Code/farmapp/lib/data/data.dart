@@ -1,3 +1,9 @@
 class Data {
-  static int numberOfItemsInCart = 30;
+  static var cities = [
+    'Antalya',
+    'Ankara',
+    'İstanbul',
+    'Bursa',
+    'Kars',
+  ];
 }

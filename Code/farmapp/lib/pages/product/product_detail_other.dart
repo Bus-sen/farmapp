@@ -13,8 +13,8 @@ import 'package:flutter/material.dart';
 import '../../widgets/icon_text.dart';
 import '../../widgets/small_text.dart';
 
-class ProductDetail extends StatelessWidget {
-  const ProductDetail({Key? key}) : super(key: key);
+class ProductDetailOther extends StatelessWidget {
+  const ProductDetailOther({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class ProductDetail extends StatelessWidget {
                       topRight: Radius.circular(Dimensions.radius20),
                       topLeft: Radius.circular(Dimensions.radius20),
                     ),
-                    color: AppColors.colorLightCardColors,
+                    color: AppColors.colorCardColors,
                     boxShadow: [
                       BoxShadow(
                         color: Color(0xFFe8e8e8),

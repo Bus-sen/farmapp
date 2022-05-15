@@ -16,6 +16,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../../widgets/app_owner_column.dart';
+
 class ProductPageBody extends StatefulWidget {
   const ProductPageBody({Key? key}) : super(key: key);
 
@@ -57,6 +59,10 @@ class _ProductPageBodyState extends State<ProductPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        BigText(text: "Öne Çıkan Tezgahlar", color: AppColors.colorTextPrimary),
+        SizedBox(
+          height: Dimensions.height10,
+        ),
         Container(
           // TODO: heightlar hardcoded olmamalı
           height: _height * 1.3,
@@ -195,11 +201,6 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/karpuz.jpg")),
                 color: Colors.white,
-                //renkleri düzgün seçelim
-                /* color: position.isEven
-                    ? Color.fromARGB(255, 174, 207, 136)
-                    : Color.fromARGB(255, 99, 129, 65),
-                    */
                 boxShadow: [
                   BoxShadow(
                     color: Color(0xFFe8e8e8),
@@ -226,7 +227,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                   ]),
               child: Container(
                 padding: EdgeInsets.only(top: 15, left: 15, right: 25),
-                child: AppColumn(text: "Karpuz"),
+                child: AppOwnerColumn(text: "Ayşe Teyze Ürünleri"),
               ),
             ),
           ),

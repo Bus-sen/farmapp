@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.transparent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ProductDetail2(),
+      home: MainHomePage(),
     );
   }
 }
