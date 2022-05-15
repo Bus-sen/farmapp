@@ -17,6 +17,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:favorite_button/favorite_button.dart';
 
 import '../../widgets/header.dart';
+import '../../widgets/icon_text.dart';
 
 class SellerMainPage extends StatefulWidget {
   const SellerMainPage({Key? key}) : super(key: key);
@@ -102,6 +103,66 @@ class _SellerMainPageState extends State<SellerMainPage> {
           ),
         ),
       ),
+      bottomNavigationBar: Column(mainAxisSize: MainAxisSize.min, children: [
+        SizedBox(
+          height: Dimensions.height20,
+        ),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Container(
+            padding: EdgeInsets.only(
+              top: Dimensions.height10,
+              bottom: Dimensions.height10,
+              right: Dimensions.width20 * 2,
+              left: Dimensions.width20 * 2,
+            ),
+            child: IconTextWidget(
+              icon: Icons.whatsapp,
+              text: "Whatsapp",
+              iconColor: AppColors.colorPrimary,
+              size: Dimensions.iconSize20 * 2,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(Dimensions.radius20),
+              color: Colors.white.withOpacity(0.9),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 5.0,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              top: Dimensions.height10,
+              bottom: Dimensions.height10,
+              right: Dimensions.width20 * 2,
+              left: Dimensions.width20 * 2,
+            ),
+            child: IconTextWidget(
+              icon: Icons.location_pin,
+              text: "Adres",
+              iconColor: AppColors.colorPrimary,
+              size: Dimensions.iconSize20 * 2,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(Dimensions.radius20),
+              color: Colors.white.withOpacity(0.9),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 5.0,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+          ),
+        ]),
+        SizedBox(
+          height: Dimensions.height15,
+        ),
+      ]),
     );
   }
 }
