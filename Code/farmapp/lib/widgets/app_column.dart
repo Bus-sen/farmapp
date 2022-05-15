@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:farmapp/utils/dimensions.dart';
+import 'package:farmapp/widgets/app_row.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,10 @@ class AppColumn extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BigText(text: text),
+        BigText(
+          text: text,
+          size: Dimensions.font26,
+        ),
         SizedBox(height: Dimensions.height10),
         Row(
           children: [
@@ -27,7 +31,7 @@ class AppColumn extends StatelessWidget {
               children: List.generate(
                   5,
                   (index) => Icon(Icons.star,
-                      size: Dimensions.iconSize20,
+                      size: Dimensions.iconSize20 / 2,
                       color: AppColors.colorPrimary)),
             ),
             SizedBox(
@@ -35,7 +39,7 @@ class AppColumn extends StatelessWidget {
             ),
             SmallText(text: "4.9"),
             SizedBox(
-              width: Dimensions.width10,
+              width: Dimensions.width10 * 4,
             ),
             SmallText(text: "122"),
             SizedBox(
@@ -45,32 +49,7 @@ class AppColumn extends StatelessWidget {
           ],
         ),
         SizedBox(height: Dimensions.height20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconTextWidget(
-              icon: Icons.circle_sharp,
-              text: "Meyve",
-              iconColor: AppColors.colorPrimary,
-            ),
-            SizedBox(
-              width: Dimensions.width10,
-            ),
-            IconTextWidget(
-              icon: Icons.location_pin,
-              text: "Serik",
-              iconColor: AppColors.colorPrimary,
-            ),
-            SizedBox(
-              width: Dimensions.width10,
-            ),
-            IconTextWidget(
-              icon: Icons.monetization_on_sharp,
-              text: "24 TL",
-              iconColor: AppColors.colorPrimary,
-            ),
-          ],
-        ),
+        AppRow(location: "Serik", money: "24 TL")
       ],
     );
   }

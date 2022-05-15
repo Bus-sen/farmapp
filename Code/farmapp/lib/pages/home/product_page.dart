@@ -5,6 +5,8 @@ import 'package:farmapp/pages/home/main_home_page.dart';
 import 'dart:developer';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/utils/dimensions.dart';
+import 'package:farmapp/widgets/app_column.dart';
+import 'package:farmapp/widgets/app_row.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/icon_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
@@ -118,7 +120,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                             BorderRadius.circular(Dimensions.radius20),
                         color: Colors.white38,
                         image: DecorationImage(
-                          image: AssetImage("assets/images/biber.jpg"),
+                          image: AssetImage("assets/images/karpuz.jpg"),
                         ),
                       ),
                     ),
@@ -150,25 +152,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                               SizedBox(
                                 height: Dimensions.height10,
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  IconTextWidget(
-                                    icon: Icons.circle_sharp,
-                                    text: "Meyve",
-                                    iconColor: AppColors.colorPrimary,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  IconTextWidget(
-                                    icon: Icons.location_pin,
-                                    text: "Serik",
-                                    iconColor: AppColors.colorPrimary,
-                                  )
-                                ],
-                              ),
+                              AppRow(location: "Serik", money: "24 TL")
                             ],
                           ),
                         ),
@@ -242,62 +226,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                   ]),
               child: Container(
                 padding: EdgeInsets.only(top: 15, left: 15, right: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigText(text: "Karpuz"),
-                    SizedBox(height: 10),
-                    Row(
-                      children: [
-                        Wrap(
-                          children: List.generate(
-                              5,
-                              (index) => Icon(Icons.star,
-                                  size: 12, color: AppColors.colorPrimary)),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        SmallText(text: "4.9"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        SmallText(text: "122"),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        SmallText(text: "yorum")
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconTextWidget(
-                          icon: Icons.circle_sharp,
-                          text: "Meyve",
-                          iconColor: AppColors.colorPrimary,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        IconTextWidget(
-                          icon: Icons.location_pin,
-                          text: "Serik",
-                          iconColor: AppColors.colorPrimary,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        IconTextWidget(
-                          icon: Icons.monetization_on_sharp,
-                          text: "24 TL",
-                          iconColor: AppColors.colorPrimary,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                child: AppColumn(text: "Karpuz"),
               ),
             ),
           ),

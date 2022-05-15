@@ -25,6 +25,8 @@ class Dimensions {
   static double width30 = screenWidth / 28;
 
   static double font20 = screenHeight / 42;
+  static double font26 = screenHeight / 32;
+
   static double radius20 = screenHeight / 42;
 
   static double iconSize20 = screenHeight / 40;
