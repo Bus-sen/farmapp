@@ -8,6 +8,7 @@ import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/app_column.dart';
 import 'package:farmapp/widgets/app_row.dart';
 import 'package:farmapp/widgets/big_text.dart';
+import 'package:farmapp/widgets/big_text_product.dart';
 import 'package:farmapp/widgets/icon_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
@@ -16,17 +17,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../../widgets/app_product_column.dart';
 import '../../widgets/app_seller_column.dart';
-import '../../widgets/app_seller_row.dart';
 
-class ProductPageBody extends StatefulWidget {
-  const ProductPageBody({Key? key}) : super(key: key);
+class SellerDetailBody extends StatefulWidget {
+  const SellerDetailBody({Key? key}) : super(key: key);
 
   @override
-  State<ProductPageBody> createState() => _ProductPageBodyState();
+  State<SellerDetailBody> createState() => _SellerDetailBodyState();
 }
 
-class _ProductPageBodyState extends State<ProductPageBody> {
+class _SellerDetailBodyState extends State<SellerDetailBody> {
   PageController pageController = PageController(viewportFraction: 0.75);
 
   //dbestech referansı, 1.50 civarı, birisi slider'ı düzgün
@@ -60,7 +61,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        BigText(text: "Öne Çıkan Tezgahlar", color: AppColors.colorTextPrimary),
+        BigText(text: "Öne Çıkan Ürünler", color: AppColors.colorTextPrimary),
         SizedBox(
           height: Dimensions.height10,
         ),
@@ -96,7 +97,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
           margin: EdgeInsets.only(left: Dimensions.width30),
           child: Row(children: [
             BigText(
-              text: "Tezgah Listesi",
+              text: "Ürün Listesi",
             ),
             SizedBox(
               width: Dimensions.width10,
@@ -127,7 +128,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                             BorderRadius.circular(Dimensions.radius20),
                         color: Colors.white38,
                         image: DecorationImage(
-                          image: AssetImage("assets/images/karpuz.jpg"),
+                          image: AssetImage("assets/images/biber.jpg"),
                         ),
                       ),
                     ),
@@ -147,8 +148,8 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              BigText(
-                                text: "Komşu Ayşe Tezgah'ın Elinden",
+                              BigTextProduct(
+                                text: "Sivri biber",
                               ),
                               SizedBox(
                                 height: Dimensions.height10,
@@ -159,8 +160,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                               SizedBox(
                                 height: Dimensions.height10,
                               ),
-                              AppSellerRow(
-                                  location: "Serik", type: "Kadın Girişimci")
+                              AppRow(location: "Serik", money: "24 TL")
                             ],
                           ),
                         ),
@@ -229,7 +229,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                   ]),
               child: Container(
                 padding: EdgeInsets.only(top: 15, left: 15, right: 25),
-                child: AppSellerColumn(text: "Ayşe Teyze Ürünleri"),
+                child: AppProductColumn(text: "Karpuz"),
               ),
             ),
           ),

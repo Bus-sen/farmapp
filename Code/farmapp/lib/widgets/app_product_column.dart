@@ -3,27 +3,27 @@
 import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/app_row.dart';
 import 'package:farmapp/widgets/big_text.dart';
+import 'package:farmapp/widgets/big_text_product.dart';
 import 'package:farmapp/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../utils/colors.dart';
-import 'app_owner_row.dart';
 import 'icon_text.dart';
 
-class AppOwnerColumn extends StatelessWidget {
+class AppProductColumn extends StatelessWidget {
   final String text;
-  const AppOwnerColumn({Key? key, required this.text}) : super(key: key);
+  const AppProductColumn({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BigText(
+        BigTextProduct(
           text: text,
-          size: Dimensions.font20,
+          size: Dimensions.font26,
         ),
         SizedBox(height: Dimensions.height10),
         Row(
@@ -50,7 +50,7 @@ class AppOwnerColumn extends StatelessWidget {
           ],
         ),
         SizedBox(height: Dimensions.height20),
-        AppOwnerRow(location: "Serik", type: "Çiftçi")
+        AppRow(location: "Serik", money: "24 TL")
       ],
     );
   }

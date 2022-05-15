@@ -1,17 +1,18 @@
 import 'package:farmapp/pages/product/product_detail.dart';
+import 'package:farmapp/pages/seller/seller_main_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class BigText extends StatelessWidget {
+class BigTextSeller extends StatelessWidget {
   final Color? color; //optional
   final String text;
   double size;
   TextOverflow overFlow;
 
-  BigText(
+  BigTextSeller(
       {Key? key,
       // TODO: add hexadecimal main color for bigger texts and titles
       // to here, not to AppColors.
@@ -24,7 +25,12 @@ class BigText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const SellerMainPage()),
+        );
+      },
       child: Text(
         text,
         overflow: overFlow,
