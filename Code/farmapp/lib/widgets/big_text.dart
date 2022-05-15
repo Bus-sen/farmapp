@@ -1,5 +1,7 @@
+import 'package:farmapp/pages/product/product_detail.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -21,14 +23,22 @@ class BigText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      overflow: overFlow,
-      style: TextStyle(
-        fontSize: size,
-        color: color,
-        fontWeight: FontWeight.w400,
-        // TODO: add font family to pubspec yaml of your choice
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const ProductDetail()),
+        );
+      },
+      child: Text(
+        text,
+        overflow: overFlow,
+        style: TextStyle(
+          fontSize: size,
+          color: color,
+          fontWeight: FontWeight.w400,
+          // TODO: add font family to pubspec yaml of your choice
+        ),
       ),
     );
   }

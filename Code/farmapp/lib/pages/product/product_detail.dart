@@ -23,10 +23,10 @@ class ProductDetail extends StatelessWidget {
         slivers: [
           SliverAppBar(
             toolbarHeight: 100,
+            foregroundColor: AppColors.colorPrimary,
             title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                AppIcon(icon: Icons.arrow_back_outlined),
                 AppIcon(icon: Icons.favorite_border_outlined),
               ],
             ),
