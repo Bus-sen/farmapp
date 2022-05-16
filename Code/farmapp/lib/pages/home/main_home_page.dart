@@ -9,6 +9,7 @@ import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/semi_big_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
+import 'package:farmapp/widgets/title_text.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,9 +39,28 @@ class _MainHomePageState extends State<MainHomePage> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: AppColors.colorPrimary,
-          leading: AppIcon(
-            icon: Icons.home,
-            backgroundColor: Colors.transparent,
+          leading: Padding(
+            padding: EdgeInsets.only(
+                left: Dimensions.width20,
+                bottom: Dimensions.height10,
+                top: Dimensions.height10 / 5),
+            child: Row(
+              children: [
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: Dimensions.width10 * 4,
+                    minHeight: Dimensions.height10 * 4,
+                    maxWidth: Dimensions.width20 * 8,
+                    maxHeight: Dimensions.height20 * 8,
+                  ),
+                  child: Image.asset(
+                    "assets/images/logo2.png",
+                    fit: BoxFit.cover,
+                    color: Colors.white.withOpacity(0.6),
+                  ),
+                ),
+              ],
+            ),
           ),
           actions: [
             Container(
