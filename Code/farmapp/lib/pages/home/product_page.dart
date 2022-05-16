@@ -156,7 +156,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               BigText(
-                                text: "Komşu Ayşe Tezgah'ın Elinden",
+                                text: "Komşu Ayşe'nin Sepetinden",
                               ),
                               SizedBox(
                                 height: Dimensions.height10,
