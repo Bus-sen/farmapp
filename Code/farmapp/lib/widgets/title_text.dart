@@ -16,7 +16,8 @@ class TitleText extends StatelessWidget {
       {Key? key,
       // TODO: add hexadecimal main color for bigger texts and titles
       // to here, not to AppColors.
-      this.color = const Color(0xFF82A99F),
+
+      this.color = const Color(0xFF0C4F4E),
       required this.text,
       this.size = 26,
       this.overFlow = TextOverflow.ellipsis})

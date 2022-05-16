@@ -15,9 +15,9 @@ class BigText extends StatelessWidget {
       {Key? key,
       // TODO: add hexadecimal main color for bigger texts and titles
       // to here, not to AppColors.
-      this.color = const Color(0xFF7CB342),
+      this.color = const Color(0xFF82A99F),
       required this.text,
-      this.size = 20,
+      this.size = 18,
       this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 
@@ -31,7 +31,7 @@ class BigText extends StatelessWidget {
         style: TextStyle(
           fontSize: size,
           color: color,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w500,
           // TODO: add font family to pubspec yaml of your choice
         ),
       ),
