@@ -11,6 +11,7 @@ import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/icon_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
+import 'package:farmapp/widgets/subtitle_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -18,6 +19,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import '../../widgets/app_seller_column.dart';
 import '../../widgets/app_seller_row.dart';
+import '../../widgets/title_text.dart';
 
 class ProductPageBody extends StatefulWidget {
   const ProductPageBody({Key? key}) : super(key: key);
@@ -60,7 +62,9 @@ class _ProductPageBodyState extends State<ProductPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        BigText(text: "Öne Çıkan Tezgahlar", color: AppColors.colorTextPrimary),
+        TitleText(
+          text: "Öne Çıkan Tezgahlar",
+        ),
         SizedBox(
           height: Dimensions.height10,
         ),
@@ -92,16 +96,17 @@ class _ProductPageBodyState extends State<ProductPageBody> {
         SizedBox(
           height: Dimensions.height20,
         ),
+
         Container(
           margin: EdgeInsets.only(left: Dimensions.width30),
-          child: Row(children: [
-            BigText(
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            SubtitleText(
               text: "Tezgah Listesi",
-            ),
-            SizedBox(
-              width: Dimensions.width10,
-            ),
+            )
           ]),
+        ),
+        SizedBox(
+          height: Dimensions.height10,
         ),
 
         // tezgah listesi:
@@ -123,8 +128,10 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                       height: Dimensions.listViewImgSize,
                       width: Dimensions.listViewImgSize,
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(Dimensions.radius20),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(Dimensions.radius20),
+                          bottomLeft: Radius.circular(Dimensions.radius20),
+                        ),
                         color: Colors.white38,
                         image: DecorationImage(
                           image: AssetImage("assets/images/karpuz.jpg"),
@@ -133,8 +140,9 @@ class _ProductPageBodyState extends State<ProductPageBody> {
                     ),
                     Expanded(
                       child: Container(
-                        height: Dimensions.listViewTextContainerSize,
+                        height: Dimensions.listViewImgSize,
                         decoration: BoxDecoration(
+                          //gradient: AppColors.gradient,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(Dimensions.radius20),
                             bottomRight: Radius.circular(Dimensions.radius20),
@@ -200,8 +208,8 @@ class _ProductPageBodyState extends State<ProductPageBody> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/images/karpuz.jpg")),
+                    fit: BoxFit.fitHeight,
+                    image: AssetImage("assets/images/salatalik.jpg")),
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(

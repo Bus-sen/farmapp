@@ -3,6 +3,7 @@ import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/app_icon.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/text_widget.dart';
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -27,7 +28,14 @@ class ProductDetail extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                AppIcon(icon: Icons.favorite_border_outlined),
+                Container(
+                  padding: EdgeInsets.all(Dimensions.x),
+                  child: FavoriteButton(
+                    isFavorite: false,
+                    iconDisabledColor: AppColors.colorPrimary,
+                    valueChanged: (_isFavorite) {},
+                  ),
+                ),
               ],
             ),
             bottom: PreferredSize(

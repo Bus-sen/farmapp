@@ -4,15 +4,20 @@ import 'package:farmapp/data/data.dart';
 import 'package:farmapp/pages/home/product_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/utils/dimensions.dart';
+import 'package:farmapp/widgets/app_icon.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/semi_big_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
+import '../../widgets/container_widget.dart';
 import '../../widgets/header.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -31,47 +36,51 @@ class _MainHomePageState extends State<MainHomePage> {
     print("Height: " + MediaQuery.of(context).size.height.toString());
 
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: Column(
-            children: [
-              //Header(),
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(Dimensions.radius20),
-                        bottomRight: Radius.circular(Dimensions.radius20)),
-                    color: Colors.white,
-                    //renkleri düzgün seçelim
-                    /* color: position.isEven
+      appBar: AppBar(
+          backgroundColor: AppColors.colorPrimary,
+          leading: AppIcon(
+            icon: Icons.home,
+            backgroundColor: Colors.transparent,
+          ),
+          actions: [
+            Container(
+              decoration: BoxDecoration(
+                //gradient: AppColors.gradient,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(Dimensions.radius20),
+                    bottomRight: Radius.circular(Dimensions.radius20)),
+                //renkleri düzgün seçelim
+                /* color: position.isEven
                     ? Color.fromARGB(255, 174, 207, 136)
                     : Color.fromARGB(255, 99, 129, 65),
                     */
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFe8e8e8),
-                        blurRadius: 5.0,
-                        offset: Offset(0, 5),
-                      )
-                    ]),
-                margin: EdgeInsets.only(top: 15, bottom: 15),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                DropdownButton(
+              ),
+              margin: EdgeInsets.only(top: 0, bottom: 0),
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                    left: Dimensions.width10,
+                                    right: Dimensions.width10),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: DropdownButton(
+                                  dropdownColor: AppColors.colorPrimary,
                                   borderRadius: BorderRadius.only(
                                     bottomLeft:
                                         Radius.circular(Dimensions.radius20),
                                     bottomRight:
                                         Radius.circular(Dimensions.radius20),
-                                    topRight:
+                                    topLeft:
                                         Radius.circular(Dimensions.radius20),
                                   ),
                                   // Initial Value
@@ -84,7 +93,10 @@ class _MainHomePageState extends State<MainHomePage> {
                                   items: cities.map((String items) {
                                     return DropdownMenuItem(
                                       value: items,
-                                      child: BigText(text: items),
+                                      child: BigText(
+                                        text: items,
+                                        color: Colors.white,
+                                      ),
                                     );
                                   }).toList(),
                                   // After selecting the desired option,it will
@@ -94,6 +106,97 @@ class _MainHomePageState extends State<MainHomePage> {
                                       dropdownvalue = newValue!;
                                     });
                                   },
+                                ),
+                              ),
+                            ],
+                          ),
+                          /*Row(
+                              children: [
+                                NormalText(text: "Komşu Ayşe Teyze"),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: AppColors.colorTextPrimary,
+                                ),
+                              ],
+                            )*/
+                        ],
+                      ),
+                      /*Center(
+                    child: 
+                  ),*/
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ]),
+      body: SafeArea(
+        child: Container(
+          //decoration: BoxDecoration(gradient: AppColors.gradient),
+          child: Column(
+            children: [
+              //Header(),
+
+              Container(
+                decoration: BoxDecoration(
+                  //gradient: AppColors.gradient,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(Dimensions.radius20),
+                      bottomRight: Radius.circular(Dimensions.radius20)),
+                  //renkleri düzgün seçelim
+                  /* color: position.isEven
+                    ? Color.fromARGB(255, 174, 207, 136)
+                    : Color.fromARGB(255, 99, 129, 65),
+                    */
+                ),
+                margin: EdgeInsets.only(top: 20, bottom: 0),
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Column(
+                  children: [
+                    /*Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 15, bottom: 5),
+                                  padding: EdgeInsets.only(left: 20, right: 20),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: DropdownButton(
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft:
+                                          Radius.circular(Dimensions.radius20),
+                                      bottomRight:
+                                          Radius.circular(Dimensions.radius20),
+                                      topRight:
+                                          Radius.circular(Dimensions.radius20),
+                                    ),
+                                    // Initial Value
+                                    value: dropdownvalue,
+
+                                    // Down Arrow Icon
+                                    icon: const Icon(Icons.keyboard_arrow_down),
+
+                                    // Array list of items
+                                    items: cities.map((String items) {
+                                      return DropdownMenuItem(
+                                        value: items,
+                                        child: BigText(text: items),
+                                      );
+                                    }).toList(),
+                                    // After selecting the desired option,it will
+                                    // change button value to selected value
+                                    onChanged: (String? newValue) {
+                                      setState(() {
+                                        dropdownvalue = newValue!;
+                                      });
+                                    },
+                                  ),
                                 ),
                               ],
                             ),
@@ -110,19 +213,24 @@ class _MainHomePageState extends State<MainHomePage> {
                         ),
                         Center(
                           child: Container(
-                            width: 40,
-                            height: 40,
+                            margin: EdgeInsets.only(top: 15, bottom: 0),
+                            padding: EdgeInsets.only(
+                              left: Dimensions.width20 * 2,
+                              right: Dimensions.width20 * 2,
+                            ),
+                            height: Dimensions.height20 * 2,
                             child: Icon(Icons.search,
-                                color: Colors.white,
+                                color: AppColors.colorPrimary,
                                 size: Dimensions.iconSize20),
                             decoration: BoxDecoration(
+                              color: Colors.white,
                               borderRadius: BorderRadius.circular(15),
-                              color: AppColors.colorPrimary,
                             ),
                           ),
                         ),
                       ],
                     ),
+                  */
                   ],
                 ),
               ),

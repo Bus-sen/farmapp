@@ -12,6 +12,8 @@ import 'package:farmapp/widgets/big_text_product.dart';
 import 'package:farmapp/widgets/icon_text.dart';
 import 'package:farmapp/widgets/normal_text.dart';
 import 'package:farmapp/widgets/small_text.dart';
+import 'package:farmapp/widgets/subtitle_text.dart';
+import 'package:farmapp/widgets/title_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -61,7 +63,7 @@ class _SellerDetailBodyState extends State<SellerDetailBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        BigText(text: "Öne Çıkan Ürünler", color: AppColors.colorTextPrimary),
+        TitleText(text: "Öne Çıkan Ürünler"),
         SizedBox(
           height: Dimensions.height10,
         ),
@@ -95,8 +97,8 @@ class _SellerDetailBodyState extends State<SellerDetailBody> {
         ),
         Container(
           margin: EdgeInsets.only(left: Dimensions.width30),
-          child: Row(children: [
-            BigText(
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            SubtitleText(
               text: "Ürün Listesi",
             ),
             SizedBox(

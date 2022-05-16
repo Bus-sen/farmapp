@@ -14,7 +14,7 @@ class TextWidget extends StatelessWidget {
       text,
       textAlign: TextAlign.start,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(fontSize: size, color: AppColors.colorTextPrimary2),
+      style: TextStyle(fontSize: size, color: AppColors.colorPrimary),
       maxLines: 300,
     );
   }
