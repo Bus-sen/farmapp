@@ -14,7 +14,7 @@ class SmallText extends StatelessWidget {
       {Key? key,
       // TODO: add hexadecimal main color for bigger texts and titles
       // to here, not to AppColors.
-      this.color = const Color(0xFF33691E),
+      this.color = const Color(0xFF82A99F),
       required this.text,
       this.height = 1.2,
       this.size = 12,

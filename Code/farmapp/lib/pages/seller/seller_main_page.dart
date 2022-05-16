@@ -44,10 +44,14 @@ class _SellerMainPageState extends State<SellerMainPage> {
         ),
         Container(
           padding: EdgeInsets.all(Dimensions.x),
-          child: FavoriteButton(
-            isFavorite: false,
-            iconDisabledColor: Colors.white,
-            valueChanged: (_isFavorite) {},
+          child: Container(
+            margin: EdgeInsets.only(right: Dimensions.width10),
+            child: FavoriteButton(
+              isFavorite: false,
+              iconColor: AppColors.colorTextPrimary,
+              iconDisabledColor: Colors.white,
+              valueChanged: (_isFavorite) {},
+            ),
           ),
         ),
       ]),

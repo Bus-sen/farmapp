@@ -106,6 +106,9 @@ class _SellerDetailBodyState extends State<SellerDetailBody> {
             ),
           ]),
         ),
+        SizedBox(
+          height: Dimensions.height10,
+        ),
 
         // tezgah listesi:
 
@@ -126,8 +129,10 @@ class _SellerDetailBodyState extends State<SellerDetailBody> {
                       height: Dimensions.listViewImgSize,
                       width: Dimensions.listViewImgSize,
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(Dimensions.radius20),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(Dimensions.radius20),
+                          bottomLeft: Radius.circular(Dimensions.radius20),
+                        ),
                         color: Colors.white38,
                         image: DecorationImage(
                           image: AssetImage("assets/images/biber.jpg"),
@@ -136,7 +141,7 @@ class _SellerDetailBodyState extends State<SellerDetailBody> {
                     ),
                     Expanded(
                       child: Container(
-                        height: Dimensions.listViewTextContainerSize,
+                        height: Dimensions.listViewImgSize,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(Dimensions.radius20),
