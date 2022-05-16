@@ -32,7 +32,7 @@ class ProductDetail extends StatelessWidget {
                   padding: EdgeInsets.all(Dimensions.x),
                   child: FavoriteButton(
                     isFavorite: false,
-                    iconDisabledColor: AppColors.colorPrimary,
+                    iconColor: AppColors.colorTextPrimary,
                     valueChanged: (_isFavorite) {},
                   ),
                 ),
