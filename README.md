@@ -42,7 +42,7 @@
 - Ui Design - Wireframe yapıldı.
 - Git ortamı sağlandı.
 - Geliştirme ortamı sağlandı.
-- Kullanılması beklenen teknolojilerin kararlaştırıldı.
+- Kullanılması beklenen teknolojiler kararlaştırıldı.
 - product_detail.dart'ta detaylar kısmındaki multiline scrollable oldu.
 - Ürün sayfası yapıldı.
 - Homepage yapıldı.
@@ -50,7 +50,7 @@
 - Favorilere ekleme ekranı yapıldı.
 - Tezgah sayfası yapıldı.
 - Dropdown şehir seçimi özelliği geliştirildi.
-- Renk paleti seçimi takımca yapıldı.
+- Renk paleti seçimi yapıldı.
 - Color palet constantları oluşturuldu.
 - Ürün widgetı yapıldı.
 - Satıcı widgetı yapıldı.
@@ -92,6 +92,7 @@ Ekte konuşma özeti mevcuttur.
 - Splash screen (1)-
 - Arama sayfası (1)-
 - Favorilerim sayfası (1)-
+
 Splash screen, arama sayfası, favorilerim sayfası hariç diğer işler yapıldı. 30 puan üzerinden 27 puan elde edildi.
 
 ## Sprint Notları
