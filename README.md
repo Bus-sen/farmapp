@@ -68,7 +68,7 @@ Takımca aplikasyonda bazı düzenlemelere gidilmesine karar verildi. Bir sonrak
 Toplantı ayarlama günü olarak pazartesi belirlendi.
 
 ## Backlog
-Sprint 3.planı hazırlanacak.
+Sprint-3 planı hazırlanacak.
 Font seçimi yapılacak.
 Splash screen, arama sayfası, favorilerim sayfası yapılacak.
 
@@ -95,3 +95,4 @@ Ekte konuşma özeti mevcuttur.
 Splash screen, arama sayfası, favorilerim sayfası hariç diğer işler yapıldı. 30 puan üzerinden 27 puan elde edildi.
 
 ## Sprint Notları
+23.05.2022
