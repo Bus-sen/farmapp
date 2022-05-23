@@ -17,6 +17,9 @@
 - Mahsüllerini satmak isteyen çiftçiler
 - 15 yaş ve üzeri tüm kullanıcılar
 
+##### Puan Mantığı
+- Puan Tamamlama Mantığı: Proje boyunca tamamlanması gereken toplamda 100 puanlık backlog belirlendi. Üç ayrı sprint için sırasıyla 30-30-40 puan dağılımı olacak şekilde karar alındı. İlk sprint için ön görülen puan hedefi 30 dur.
+
 # SPRİNT-1
 ## Sprintin Durumu
 - Takımdaki kişilerin rolleri belirlendi.
