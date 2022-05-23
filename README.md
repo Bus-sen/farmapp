@@ -50,7 +50,6 @@
 - Ürün sayfası yapıldı.
 - Homepage yapıldı.
 - Satıcı ekranı yapıldı.
-- Favorilere ekleme ekranı yapıldı.
 - Tezgah sayfası yapıldı.
 - Dropdown şehir seçimi özelliği geliştirildi.
 - Renk paleti seçimi yapıldı.
@@ -60,15 +59,17 @@
 - Text widgetları yapıldı.
 - Icon widgetları yapıldı.
 - Header ve bottombar özellikleri ayarlandı.
-- Profil ekranı yapıldı.
-- Profil widgetı yapıldı.
-- Üye olma ekranı yapıldı.
 Ürün resmi ekte vardır.
 - Sprint backlogları tamamlandı.
+- Sprint planlamasına ve hedefe uyuldu. Değişikliklere göre süreç içinde revize edildi.
 
 ## Sprint Retrospective
-Takımca aplikasyonda bazı düzenlemelere gidilmesine karar verildi. Bir sonraki sprinte kadar hedef yeni düzenlemelerin bitmesi gerektiği oldu. Görevlerde ve yapılacak işlerde değişikliğe gidildi. Görev dağılımlarımızda Ece developer olarak data üretmekle ilgilenecek, Büşra ve esra uygulama fonksiyon ve arayüzlerinde ilerlemeler sağlayacaklar. 
-Toplantı ayarlama günü olarak pazartesi belirlendi.
+- Takımca aplikasyonda bazı düzenlemelere gidilmesine karar verildi. 
+- Bir sonraki sprinte kadar hedef yeni düzenlemelerin bitmesi gerektiği oldu. 
+- Görevlerde ve yapılacak işlerde değişikliğe gidildi. 
+- Görev dağılımlarımızda Ece developer olarak data üretmekle ilgilenecek,
+- Büşra ve Esra uygulama fonksiyon ve arayüzlerinde ilerlemeler sağlayacaklar. 
+- Toplantı ayarlama günü olarak pazartesi belirlendi. 
 
 ## Backlog
 Sprint-3 planı hazırlanacak.
@@ -80,20 +81,14 @@ Ekte konuşma özeti mevcuttur.
 
 ## Puanlama
 30 puan üzerinden işlerin puanlandırılması:
-- Kullanılması beklenen teknolojiler (3)+
-- product_detail.dart'ta detaylar kısmındaki multiline scrollable (3)+
+- Kullanılması beklenen teknolojiler (5)+
+- product_detail.dart'ta detaylar kısmındaki multiline scrollable (5)+
 - Ürün sayfası (3)+
 - Homepage (3)+
 - Satıcı ekranı (3)+
-- Favorilere ekleme ekranı (1)+
 - Tezgah sayfası (3)+
 - Color palet constantları (1)+
-- Widgetlar (4)+
+- Widgetlar (5)+
 - Header ve bottombar özellikleri ayarlanması (2)+
-- Profil ekranı (2)+
-- Üye olma ekranı (2)+
-
 ## Board linki
 https://trello.com/invite/b/112WKGJS/d6dc84f8a0efd6a96227bdf6dffe38c4/komsu-pazar
-
-## Sprint Notları
