@@ -36,6 +36,62 @@
 ## Diğer Notlar
 - Bir sonraki sprinte kadar wireframe tasarımları ortaya çıkararak UI design’a başlanmalı.
 
-# Sprint-2
+# SPRİNT-2
 
-09.05.2022
+## Sprint Review 
+- Ui Design - Wireframe yapıldı.
+- Git ortamı sağlandı.
+- Geliştirme ortamı sağlandı.
+- Kullanılması beklenen teknolojilerin kararlaştırıldı.
+- product_detail.dart'ta detaylar kısmındaki multiline scrollable oldu.
+- Ürün sayfası yapıldı.
+- Homepage yapıldı.
+- Satıcı ekranı yapıldı.
+- Favorilere ekleme ekranı yapıldı.
+- Tezgah sayfası yapıldı.
+- Dropdown şehir seçimi özelliği geliştirildi.
+- Renk paleti seçimi takımca yapıldı.
+- Color palet constantları oluşturuldu.
+- Ürün widgetı yapıldı.
+- Satıcı widgetı yapıldı.
+- Text widgetları yapıldı.
+- Icon widgetları yapıldı.
+- Header ve bottombar özellikleri ayarlandı.
+- Profil ekranı yapıldı.
+- Profil widgetı yapıldı.
+- Üye olma ekranı yapıldı.
+Ürün resmi ekte vardır.
+- Sprint backlogları tamamlandı.
+
+## Sprint Retrospective
+Takımca aplikasyonda bazı düzenlemelere gidilmesine karar verildi. Bir sonraki sprinte kadar hedef yeni düzenlemelerin bitmesi gerektiği oldu. Görevlerde ve yapılacak işlerde değişikliğe gidildi. Görev dağılımlarımızda Ece developer olarak data üretmekle ilgilenecek, Büşra ve esra uygulama fonksiyon ve arayüzlerinde ilerlemeler sağlayacaklar. 
+Toplantı ayarlama günü olarak pazartesi belirlendi.
+
+## Backlog
+Sprint 3.planı hazırlanacak.
+Font seçimi yapılacak.
+Splash screen, arama sayfası, favorilerim sayfası yapılacak.
+
+## Daily Scrum
+Ekte konuşma özeti mevcuttur.
+
+## Puanlama
+30 puan üzerinden işlerin puanlandırılması:
+- Kullanılması beklenen teknolojiler (3)+
+- product_detail.dart'ta detaylar kısmındaki multiline scrollable (3)+
+- Ürün sayfası (3)+
+- Homepage (2)+
+- Satıcı ekranı (3)+
+- Favorilere ekleme ekranı (1)+
+- Tezgah sayfası (3)+
+- Color palet constantları (1)+
+- Widgetlar (2)+
+- Header ve bottombar özellikleri ayarlanması (2)+
+- Profil ekranı (2)+
+- Üye olma ekranı (2)+
+- Splash screen (1)-
+- Arama sayfası (1)-
+- Favorilerim sayfası (1)-
+Splash screen, arama sayfası, favorilerim sayfası hariç diğer işler yapıldı. 30 puan üzerinden 27 puan elde edildi.
+
+## Sprint Notları
