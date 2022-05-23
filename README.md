@@ -17,6 +17,7 @@
 - Mahsüllerini satmak isteyen çiftçiler
 - 15 yaş ve üzeri tüm kullanıcılar
 
+# SPRİNT-1
 ## Sprintin Durumu
 - Takımdaki kişilerin rolleri belirlendi.
 - Görev atamaları gerçekleştirildi.
@@ -34,5 +35,7 @@
 
 ## Diğer Notlar
 - Bir sonraki sprinte kadar wireframe tasarımları ortaya çıkararak UI design’a başlanmalı.
+
+# Sprint-2
 
 09.05.2022
