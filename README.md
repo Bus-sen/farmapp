@@ -80,20 +80,17 @@ Ekte konuşma özeti mevcuttur.
 - Kullanılması beklenen teknolojiler (3)+
 - product_detail.dart'ta detaylar kısmındaki multiline scrollable (3)+
 - Ürün sayfası (3)+
-- Homepage (2)+
+- Homepage (3)+
 - Satıcı ekranı (3)+
 - Favorilere ekleme ekranı (1)+
 - Tezgah sayfası (3)+
 - Color palet constantları (1)+
-- Widgetlar (2)+
+- Widgetlar (4)+
 - Header ve bottombar özellikleri ayarlanması (2)+
 - Profil ekranı (2)+
 - Üye olma ekranı (2)+
-- Splash screen (1)-
-- Arama sayfası (1)-
-- Favorilerim sayfası (1)-
 
-Splash screen, arama sayfası, favorilerim sayfası hariç diğer işler yapıldı. 30 puan üzerinden 27 puan elde edildi.
+## Board linki
+https://trello.com/invite/b/112WKGJS/d6dc84f8a0efd6a96227bdf6dffe38c4/komsu-pazar
 
 ## Sprint Notları
-23.05.2022
