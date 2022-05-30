@@ -222,7 +222,7 @@ class _ProductPageBodyState extends State<ProductPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: _heightText,
+              height: _heightText * 1.2,
               margin: EdgeInsets.only(left: 45, right: 45, bottom: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
