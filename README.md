@@ -17,6 +17,10 @@
 - Mahsüllerini satmak isteyen çiftçiler
 - 15 yaş ve üzeri tüm kullanıcılar
 
+##### Puan Mantığı
+- Puan Tamamlama Mantığı: Proje boyunca tamamlanması gereken toplamda 100 puanlık backlog belirlendi. Üç ayrı sprint için sırasıyla 30-30-40 puan dağılımı olacak şekilde karar alındı. İlk sprint için ön görülen puan hedefi 30 dur.
+
+# SPRİNT-1
 ## Sprintin Durumu
 - Takımdaki kişilerin rolleri belirlendi.
 - Görev atamaları gerçekleştirildi.
@@ -35,4 +39,56 @@
 ## Diğer Notlar
 - Bir sonraki sprinte kadar wireframe tasarımları ortaya çıkararak UI design’a başlanmalı.
 
-09.05.2022
+# SPRİNT-2
+
+## Sprint Review 
+- Ui Design - Wireframe yapıldı.
+- Git ortamı sağlandı.
+- Geliştirme ortamı sağlandı.
+- Kullanılması beklenen teknolojiler kararlaştırıldı.
+- product_detail.dart'ta detaylar kısmındaki multiline scrollable oldu.
+- Ürün sayfası yapıldı.
+- Homepage yapıldı.
+- Satıcı ekranı yapıldı.
+- Tezgah sayfası yapıldı.
+- Dropdown şehir seçimi özelliği geliştirildi.
+- Renk paleti seçimi yapıldı.
+- Color palet constantları oluşturuldu.
+- Ürün widgetı yapıldı.
+- Satıcı widgetı yapıldı.
+- Text widgetları yapıldı.
+- Icon widgetları yapıldı.
+- Header ve bottombar özellikleri ayarlandı.
+Ürün resmi ekte vardır.
+- Sprint backlogları tamamlandı.
+- Sprint planlamasına ve hedefe uyuldu. Değişikliklere göre süreç içinde revize edildi.
+
+## Sprint Retrospective
+- Takımca aplikasyonda bazı düzenlemelere gidilmesine karar verildi. 
+- Bir sonraki sprinte kadar hedef yeni düzenlemelerin bitmesi gerektiği oldu. 
+- Görevlerde ve yapılacak işlerde değişikliğe gidildi. 
+- Görev dağılımlarımızda Ece developer olarak data üretmekle ilgilenecek,
+- Büşra ve Esra uygulama fonksiyon ve arayüzlerinde ilerlemeler sağlayacaklar. 
+- Toplantı ayarlama günü olarak pazartesi belirlendi. 
+
+## Backlog
+Sprint-3 planı hazırlanacak.
+Font seçimi yapılacak.
+Splash screen, arama sayfası, favorilerim sayfası yapılacak.
+
+## Daily Scrum
+Ekte konuşma özeti mevcuttur.
+
+## Puanlama
+30 puan üzerinden işlerin puanlandırılması:
+- Kullanılması beklenen teknolojiler (5)+
+- product_detail.dart'ta detaylar kısmındaki multiline scrollable (5)+
+- Ürün sayfası (3)+
+- Homepage (3)+
+- Satıcı ekranı (3)+
+- Tezgah sayfası (3)+
+- Color palet constantları (1)+
+- Widgetlar (5)+
+- Header ve bottombar özellikleri ayarlanması (2)+
+## Board linki
+https://trello.com/invite/b/112WKGJS/d6dc84f8a0efd6a96227bdf6dffe38c4/komsu-pazar
