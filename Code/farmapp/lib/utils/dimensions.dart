@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Dimensions {
@@ -13,8 +14,6 @@ class Dimensions {
   static double pageViewContainer = screenHeight / y;
   static double pageViewTextContainer = screenHeight / z;
 
-// todo: sized boxları bu standartlara çevirelim, width de yapalım.
-// 2:20 civarı
   static double height10 = screenHeight / 84;
   static double height15 = screenHeight / 56;
   static double height20 = screenHeight / 42;
@@ -35,4 +34,16 @@ class Dimensions {
   static double listViewTextContainerSize = screenWidth / 4;
 
   static double productContainerSize = screenHeight / 2.5;
+
+  static EdgeInsets cardMargin = EdgeInsets.all(height10);
+  static EdgeInsets horizontalPadding =
+      EdgeInsets.symmetric(horizontal: height20);
+  static RoundedRectangleBorder roundedRectangleBorder =
+      RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius20));
+
+  static TextStyle defaultStyle = TextStyle(color: Colors.black45);
+  static TextStyle linkStyle = TextStyle(color: Colors.black);
+  static TextStyle lightStyle = TextStyle(color: Colors.white);
+
+  static TextStyle lightStyleHint = TextStyle(color: Colors.white60);
 }

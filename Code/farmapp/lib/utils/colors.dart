@@ -9,10 +9,12 @@ class AppColors {
   // Primary Color
   //static const Color colorPrimary = Color(0xFF7CB342);
 
-  static const Color colorPrimary = Color(0xFF96CEB4);
-  static const Color colorSecondary = Color(0xFFFFEEAD);
-  static const Color colorCardColors = Color(0xFFD9534F);
+  static const Color colorPrimary = Color.fromARGB(255, 98, 148, 125);
+  static const Color colorSecondary = Color(0xFFD9534F);
+  static const Color colorCardColors = Color(0xFFFFEEAD);
   static const Color colorTextPrimary = Color(0xFFFFAD60);
+
+  static const Color colorBackground = Color.fromARGB(255, 248, 246, 234);
   static const Color colorFav = Color.fromARGB(255, 180, 73, 69);
 
   static const LinearGradient gradient = LinearGradient(
