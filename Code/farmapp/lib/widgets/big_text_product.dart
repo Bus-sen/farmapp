@@ -1,10 +1,10 @@
-import 'package:farmapp/pages/product/product_detail.dart';
-import 'package:farmapp/pages/seller/seller_main_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+
+import '../pages/product/product_detail.dart';
 
 class BigTextProduct extends StatelessWidget {
   final Color? color; //optional

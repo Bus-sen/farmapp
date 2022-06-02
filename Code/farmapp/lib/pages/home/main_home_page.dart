@@ -16,7 +16,7 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   String dropdownvalue = 'Antalya';
-  var cities = Data.cities;
+  var cities = Data.regions;
 
   @override
   Widget build(BuildContext context) {

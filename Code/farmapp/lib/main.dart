@@ -1,3 +1,6 @@
+import 'package:farmapp/pages/another_design/choose_city.dart';
+import 'package:farmapp/pages/another_design/favorites.dart';
+import 'package:farmapp/pages/another_design/others.dart';
 import 'package:farmapp/pages/another_design/splash_screen.dart';
 import 'package:farmapp/pages/home/main_home_page.dart';
 import 'package:farmapp/pages/product/product_detail_other.dart';
@@ -24,9 +27,12 @@ class MyApp extends StatelessWidget {
           splashColor: Colors.transparent,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: SplashScreen(),
+        home: HomePage(),
         routes: {
-          'homepage': (context) => MainHomePage(),
+          'homepage': (context) => HomePage(),
+          'splash': (context) => SplashScreen(),
+          'favorites': (context) => FavoritesPage(),
+          'city': (context) => ChooseCityPage(),
         });
   }
 }

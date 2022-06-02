@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Product {
   int id;
-  String title, type, price, summary, timestamp;
+  String title, type, price, summary, timestamp, image;
   bool isAvailable;
 
   Product(
@@ -12,5 +12,6 @@ class Product {
       required this.price,
       required this.summary,
       required this.timestamp,
+      required this.image,
       required this.isAvailable});
 }

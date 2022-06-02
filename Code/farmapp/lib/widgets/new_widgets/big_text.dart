@@ -1,3 +1,4 @@
+import 'package:farmapp/utils/dimensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -13,7 +14,7 @@ class BigText extends StatelessWidget {
       {Key? key,
       this.color = const Color(0xFF82A99F),
       required this.text,
-      this.size = 15,
+      this.size = 18,
       this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 

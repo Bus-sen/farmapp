@@ -5,13 +5,6 @@ import '../utils/dimensions.dart';
 import 'big_text.dart';
 
 class CustomWidgets {
-  static Container customNavigationBar = Container(
-    child: BottomNavigationBar(items: [
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Belgelerim"),
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Profilim"),
-    ]),
-  );
-
   static CircularProgressIndicator loadingIndicator = CircularProgressIndicator(
     color: AppColors.colorPrimary,
   );
@@ -49,6 +42,10 @@ class CustomWidgets {
     ),
     shape: Dimensions.roundedRectangleBorder,
     padding: EdgeInsets.all(Dimensions.height10 / 2),
+  );
+
+  static SizedBox spacer = SizedBox(
+    height: Dimensions.height20,
   );
 
   static Column header = Column(
