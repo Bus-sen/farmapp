@@ -3,12 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
 
 class AppColors {
-  // TODO: Please change these colors according to your choice of UI
-  // We still do not have UI designs.
-
-  // Primary Color
-  //static const Color colorPrimary = Color(0xFF7CB342);
-
   static const Color colorPrimary = Color.fromARGB(255, 98, 148, 125);
   static const Color colorSecondary = Color(0xFFD9534F);
   static const Color colorCardColors = Color(0xFFFFEEAD);
