@@ -1,5 +1,4 @@
 import 'package:farmapp/pages/another_design/splash_screen.dart';
-import 'package:farmapp/pages/auth/sign_up_page.dart';
 import 'package:farmapp/pages/home/main_home_page.dart';
 import 'package:farmapp/pages/product/product_detail_other.dart';
 import 'package:farmapp/pages/product/product_detail.dart';

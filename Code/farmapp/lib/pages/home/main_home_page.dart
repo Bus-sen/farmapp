@@ -4,22 +4,8 @@ import 'package:farmapp/data/data.dart';
 import 'package:farmapp/pages/home/product_page.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/utils/dimensions.dart';
-import 'package:farmapp/widgets/app_icon.dart';
 import 'package:farmapp/widgets/big_text.dart';
-import 'package:farmapp/widgets/normal_text.dart';
-import 'package:farmapp/widgets/semi_big_text.dart';
-import 'package:farmapp/widgets/small_text.dart';
-import 'package:farmapp/widgets/title_text.dart';
-import 'package:favorite_button/favorite_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
-
-import '../../widgets/container_widget.dart';
-import '../../widgets/header.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({Key? key}) : super(key: key);
@@ -52,11 +38,6 @@ class _MainHomePageState extends State<MainHomePage> {
                     minHeight: Dimensions.height10 * 4,
                     maxWidth: Dimensions.width20 * 8,
                     maxHeight: Dimensions.height20 * 8,
-                  ),
-                  child: Image.asset(
-                    "assets/images/logo2.png",
-                    fit: BoxFit.cover,
-                    color: Colors.white.withOpacity(0.6),
                   ),
                 ),
               ],
