@@ -14,8 +14,6 @@ class Header extends StatelessWidget {
       width: double.infinity,
       child: Column(children: [
         Row(
-          //TODO: logo-header-anasayfaya dönmek falan buradan yapılabilir
-          // Ya da kapatabiliriz burayı
           children: [
             Text("Komşu Pazar",
                 style: TextStyle(
