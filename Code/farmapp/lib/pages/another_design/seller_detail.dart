@@ -130,7 +130,9 @@ class _SellerDetailPageState extends State<SellerDetailPage> {
               left: Dimensions.width20 * 2,
             ),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed('pdf');
+              },
               child: IconTextWidget(
                 icon: Icons.remove_red_eye_outlined,
                 text: "Broşür",

@@ -1,5 +1,6 @@
 import 'package:farmapp/pages/another_design/favorites.dart';
 import 'package:farmapp/pages/another_design/homepage.dart';
+import 'package:farmapp/pages/another_design/pdf_viewer.dart';
 import 'package:farmapp/pages/another_design/seller_detail.dart';
 import 'package:farmapp/pages/another_design/splash_screen.dart';
 import 'package:farmapp/utils/colors.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
           'splash': (context) => SplashScreen(),
           'favorites': (context) => FavoritesPage(),
           'seller': (context) => SellerDetailPage(),
+          'pdf': (context) => PDFViewerPage(),
         });
   }
 }
