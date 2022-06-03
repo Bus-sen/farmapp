@@ -45,6 +45,60 @@ class Data {
         image: "",
         timestamp: "20.02.2022",
         isAvailable: true),
+    Product(
+        id: 5,
+        title: "Portakal",
+        type: "Alanya Dilimli Portakal",
+        price: "6 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 6,
+        title: "Limon",
+        type: "Kıbrıs Lİmonu",
+        price: "5 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 7,
+        title: "Mandalina",
+        type: "Klemantin Mandalina",
+        price: "5 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 8,
+        title: "İncir",
+        type: "Siyah Orak İnciri",
+        price: "4 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 9,
+        title: "Ayva",
+        type: "Ekmek Ayvası",
+        price: "3 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 10,
+        title: "Kiraz",
+        type: "Turfanda Kirazı",
+        price: "5 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
   ];
 
   static List<Seller> sellerList = [
@@ -132,6 +186,90 @@ class Data {
               timestamp: "20.02.2022",
               isAvailable: true),
         ]),
+    Seller(
+        id: 3,
+        title: "Nurcan Hanım",
+        city: "Elmalı",
+        summary: "Dalından sofranıza.",
+        type: "Kadın Girişimci",
+        phone: "052430224304",
+        image:
+            'https://cdn.pixabay.com/photo/2016/01/02/02/03/orange-1117645_960_720.jpg',
+        brochure: "http://www.africau.edu/images/default/sample.pdf",
+        products: [
+          Product(
+              id: 5,
+              title: "Portakal",
+              type: "Alanya Dilimli Portakal",
+              price: "6 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2017/01/20/15/06/oranges-1995056_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 6,
+              title: "Limon",
+              type: "Kıbrıs Limonu",
+              price: "5 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/01/02/01/49/lemon-1117568_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 7,
+              title: "Mandalina",
+              type: "Klemantin Mandalina",
+              price: "5 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/10/07/14/11/tangerines-1721633_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+        ]),
+    Seller(
+        id: 4,
+        title: "Mehmet Amca",
+        city: "Gündoğmuş",
+        summary: "Doğal, taze ürünler.",
+        type: "Yerli Girişimci",
+        phone: "052510221303",
+        image:
+            'https://cdn.pixabay.com/photo/2020/05/24/15/19/flowers-quince-5214656_960_720.jpg',
+        brochure: "http://www.africau.edu/images/default/sample.pdf",
+        products: [
+          Product(
+              id: 8,
+              title: "İncir",
+              type: "Siyah Orak İnciri",
+              price: "4 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2020/05/26/22/28/figs-5224998_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 9,
+              title: "Ayva",
+              type: "Ekmek Ayvası",
+              price: "3 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2012/11/07/17/34/quince-65189_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 10,
+              title: "Kiraz",
+              type: "Turfanda Kirazı",
+              price: "5 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2017/07/30/13/35/cherry-2554364_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+        ]),
   ];
 
   static final List<String> imagesList = [
@@ -139,11 +277,15 @@ class Data {
     'https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg',
     'https://cdn.pixabay.com/photo/2015/10/24/20/03/apples-1004886_960_720.jpg',
     'https://cdn.pixabay.com/photo/2016/07/11/19/40/eggs-1510449_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2016/01/02/01/15/orange-tree-1117420_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg',
   ];
   static final List<String> titles = [
     ' Ayşe Hanım Tezgahı ',
     ' Hayriye Hanımın Çiftliği ',
     ' Ucuzluk Pazarı ',
     ' Yumurtacı Halil ',
+    ' Nurcan Hanımın Bahçesi',
+    ' Mehmet Amcanın Yeri',
   ];
 }
