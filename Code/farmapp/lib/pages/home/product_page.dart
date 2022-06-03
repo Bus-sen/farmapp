@@ -42,7 +42,6 @@ class _ProductPageBodyState extends State<ProductPageBody> {
   void initState() {
     //current page value'yu alacağız
     super.initState();
-    //! koymak onun null olamayacağını gösterecek
     pageController.addListener(() {
       setState(() {
         _currPageValue = pageController.page!;

@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 
 class Seller {
   int id;
-  String title, city, type, phone, image;
-  List products;
+  String title, summary, city, type, phone, image, brochure;
+  List<Product> products;
 
   Seller(
       {required this.id,
       required this.title,
+      required this.summary,
       required this.city,
       required this.type,
       required this.phone,
       required this.image,
+      required this.brochure,
       required this.products});
 }

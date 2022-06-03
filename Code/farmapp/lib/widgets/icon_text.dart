@@ -1,3 +1,4 @@
+import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/utils/dimensions.dart';
 import 'package:farmapp/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,7 +9,7 @@ class IconTextWidget extends StatelessWidget {
   final IconData icon;
   final String text;
   final Color iconColor;
-  //final Color textColor;
+  final Color textColor;
   final double size;
 
   const IconTextWidget(
@@ -16,7 +17,7 @@ class IconTextWidget extends StatelessWidget {
       required this.icon,
       required this.text,
       required this.iconColor,
-      //this.textColor = const Color(0xFFFFFFFF),
+      this.textColor = AppColors.colorPrimary,
       this.size = 20})
       : super(key: key);
 
@@ -34,7 +35,7 @@ class IconTextWidget extends StatelessWidget {
         ),
         SmallText(
           text: text,
-          //color: textColor,
+          color: textColor,
         ),
       ],
     );

@@ -45,7 +45,7 @@ class CustomWidgets {
   );
 
   static SizedBox spacer = SizedBox(
-    height: Dimensions.height20,
+    height: Dimensions.height10,
   );
 
   static Column header = Column(

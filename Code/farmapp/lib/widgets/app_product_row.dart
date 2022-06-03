@@ -8,12 +8,12 @@ import '../utils/colors.dart';
 import '../utils/dimensions.dart';
 import 'icon_text.dart';
 
-class AppSellerRow extends StatelessWidget {
-  final String location;
+class AppProductRow extends StatelessWidget {
+  final String price;
   final String type;
   double size;
-  AppSellerRow(
-      {Key? key, required this.location, required this.type, this.size = 20})
+  AppProductRow(
+      {Key? key, required this.price, required this.type, this.size = 20})
       : super(key: key);
 
   @override
@@ -22,19 +22,21 @@ class AppSellerRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         IconTextWidget(
-          icon: Icons.location_pin,
-          text: location,
-          iconColor: AppColors.colorPrimary,
+          icon: Icons.money,
+          text: price,
+          iconColor: AppColors.colorBackground,
           size: size,
+          textColor: AppColors.colorBackground,
         ),
         SizedBox(
           width: Dimensions.width10,
         ),
         IconTextWidget(
-          icon: Icons.person,
+          icon: Icons.auto_awesome,
           text: type,
-          iconColor: AppColors.colorPrimary,
+          iconColor: AppColors.colorBackground,
           size: size,
+          textColor: AppColors.colorBackground,
         ),
       ],
     );
