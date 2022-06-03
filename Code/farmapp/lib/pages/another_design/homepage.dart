@@ -27,33 +27,82 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    String dropdownvalue = globals.city;
+    var cities = Data.availableCities;
     return Scaffold(
       backgroundColor: AppColors.colorBackground,
       appBar: AppBar(
-        backgroundColor: AppColors.colorPrimary,
-        leading: IconButton(
-          icon: Icon(
-            Icons.home,
-            color: AppColors.colorBackground,
-          ),
-          onPressed: () {},
-        ),
-        title: Text(
-          "Komşu Pazar / " + globals.city.toString(),
-          style: TextStyle(color: AppColors.colorBackground),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.favorite,
-              color: AppColors.colorBackground,
+          title: Text("Komşu Pazar"),
+          backgroundColor: AppColors.colorPrimary,
+          leading: Icon(Icons.abc),
+          actions: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(Dimensions.radius20),
+                    bottomRight: Radius.circular(Dimensions.radius20)),
+              ),
+              margin: EdgeInsets.only(top: 0, bottom: 0),
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                    left: Dimensions.width10,
+                                    right: Dimensions.width10),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: DropdownButton(
+                                  dropdownColor: AppColors.colorPrimary,
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft:
+                                        Radius.circular(Dimensions.radius20),
+                                    bottomRight:
+                                        Radius.circular(Dimensions.radius20),
+                                    topLeft:
+                                        Radius.circular(Dimensions.radius20),
+                                  ),
+                                  // Initial Value
+                                  value: dropdownvalue,
+
+                                  // Down Arrow Icon
+                                  icon: const Icon(Icons.keyboard_arrow_down),
+
+                                  // Array list of items
+                                  items: cities.map((String items) {
+                                    return DropdownMenuItem(
+                                      value: items,
+                                      child: BigText(
+                                        text: items,
+                                        color: Colors.white,
+                                      ),
+                                    );
+                                  }).toList(),
+                                  onChanged: (String? newValue) {
+                                    setState(() {
+                                      dropdownvalue = newValue!;
+                                    });
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            onPressed: () {
-              Navigator.of(context).pushNamed("favorites");
-            },
-          ),
-        ],
-      ),
+          ]),
       body: ListView(
         children: [
           Column(

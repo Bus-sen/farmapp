@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:farmapp/utils/colors.dart';
 import 'package:farmapp/widgets/app_product_row.dart';
 import 'package:farmapp/widgets/app_seller_row.dart';
@@ -7,7 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import 'package:farmapp/utils/globals.dart' as globals;
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../data/data.dart';
 import '../../data/product.dart';
@@ -76,29 +81,45 @@ class _SellerDetailPageState extends State<SellerDetailPage> {
           height: Dimensions.height20,
         ),
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          Container(
-            padding: EdgeInsets.only(
-              top: Dimensions.height10,
-              bottom: Dimensions.height10,
-              right: Dimensions.width20 * 2,
-              left: Dimensions.width20 * 2,
-            ),
-            child: IconTextWidget(
-              icon: Icons.whatsapp,
-              text: "Whatsapp",
-              iconColor: AppColors.colorPrimary,
-              size: Dimensions.iconSize20 * 2,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(Dimensions.radius20),
-              color: Colors.white.withOpacity(0.9),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 5.0,
-                  offset: Offset(0, 5),
-                ),
-              ],
+          GestureDetector(
+            onTap: () async {
+              String text = "Merhabalar, Komşu Pazar'dan geliyorum";
+              print("buradayım, telefon: " + globals.selectedSeller.phone);
+              String telephoneNumber = '90' + globals.selectedSeller.phone;
+              String telephoneUrl = "https://wa.me/" + telephoneNumber;
+
+              var whatsappUrl =
+                  telephoneUrl + "&text=${Uri.encodeComponent(text)}";
+              try {
+                launch(whatsappUrl);
+              } catch (e) {
+                //To handle error and display error message
+              }
+            },
+            child: Container(
+              padding: EdgeInsets.only(
+                top: Dimensions.height10,
+                bottom: Dimensions.height10,
+                right: Dimensions.width20 * 2,
+                left: Dimensions.width20 * 2,
+              ),
+              child: IconTextWidget(
+                icon: Icons.whatsapp,
+                text: "Whatsapp",
+                iconColor: AppColors.colorPrimary,
+                size: Dimensions.iconSize20 * 2,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
+                color: Colors.white.withOpacity(0.9),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                  ),
+                ],
+              ),
             ),
           ),
           Container(

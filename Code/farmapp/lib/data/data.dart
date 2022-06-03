@@ -4,14 +4,8 @@ import 'package:farmapp/data/product.dart';
 import 'package:farmapp/data/seller.dart';
 
 class Data {
-  static var regions = [
-    'Akdeniz',
-    'Ege',
-    'Marmara',
-    'Karadeniz',
-    'İç Anadolu',
-    'Doğu Anadolu',
-    'Güneydoğu Anadolu',
+  static var availableCities = [
+    "Antalya",
   ];
 
   static List<Product> productList = [

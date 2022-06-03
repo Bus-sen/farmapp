@@ -1,4 +1,3 @@
-import 'package:farmapp/pages/product/product_detail.dart';
 import 'package:farmapp/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

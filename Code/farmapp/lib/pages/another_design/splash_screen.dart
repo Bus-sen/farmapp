@@ -36,7 +36,7 @@ class SplashScreen extends StatelessWidget {
                           height: Dimensions.height10 * 5,
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.of(context).pushNamed('city');
+                              Navigator.of(context).pushNamed('homepage');
                             },
                             child: Text(
                               "Şehir Seç",
