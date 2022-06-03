@@ -34,7 +34,11 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
           title: Text("Komşu Pazar"),
           backgroundColor: AppColors.colorPrimary,
-          leading: Icon(Icons.abc),
+          leading: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed("favorites");
+              },
+              child: Icon(Icons.favorite)),
           actions: [
             Container(
               decoration: BoxDecoration(
