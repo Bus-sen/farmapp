@@ -178,7 +178,11 @@ ListView _listviewBuilder() {
       itemBuilder: (context, index) {
         ;
         return new GestureDetector(
-          onTap: () {},
+          onTap: () {
+            globals.selectedProduct = productList[index];
+
+            Navigator.of(context).pushNamed('product');
+          },
           child: Container(
             margin: EdgeInsets.only(
                 left: Dimensions.width20,

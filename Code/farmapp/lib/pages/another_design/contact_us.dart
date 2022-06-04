@@ -75,7 +75,7 @@ class ContactPage extends StatelessWidget {
                             size: Dimensions.font20,
                           ),
                           BigText(
-                            text: " grup174.oua@gmail.com",
+                            text: " oua.grup174@gmail.com",
                             color: Colors.white.withOpacity(0.9),
                             size: Dimensions.font20,
                           ),
