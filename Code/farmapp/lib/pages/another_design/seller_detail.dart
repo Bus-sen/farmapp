@@ -43,7 +43,7 @@ class _SellerDetailPageState extends State<SellerDetailPage> {
         actions: [
           FavoriteButton(
               isFavorite: isFavorite,
-              iconColor: AppColors.colorSecondary,
+              iconColor: AppColors.colorTextPrimary,
               iconDisabledColor: Colors.white,
               valueChanged: (_isFavorite) {
                 globals.favorites.contains(globals.selectedSeller)

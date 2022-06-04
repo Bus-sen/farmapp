@@ -17,7 +17,7 @@ class Data {
         region: "Antalya",
         summary: "Bugün bunları satıyorum",
         type: "Kadın Girişimci",
-        phone: "052230303",
+        phone: "05076576321",
         brochure: "http://www.africau.edu/images/default/sample.pdf",
         image:
             "https://cdn.pixabay.com/photo/2015/10/24/20/03/apples-1004886_960_720.jpg",
@@ -25,7 +25,7 @@ class Data {
           Product(
               id: 1,
               title: "Karpuz",
-              type: "Diyarbakır Karpuzu",
+              type: "Ahlat Karpuzu",
               price: "10 TL/kg",
               summary: "Taze taze sulu sulu",
               timestamp: "20.02.2022",
@@ -35,7 +35,7 @@ class Data {
           Product(
               id: 2,
               title: "Kavun",
-              type: "Diyarbakır Kavunu",
+              type: "Topatan Kavunu",
               price: "8 TL/kg",
               summary: "Taze taze sulu sulu",
               timestamp: "12.02.2022",
@@ -45,7 +45,7 @@ class Data {
           Product(
               id: 3,
               title: "Biber",
-              type: "Diyarbakır Biberi",
+              type: "Sarı Biber",
               price: "3 TL/kg",
               summary: "Taze taze sulu sulu",
               image:
@@ -55,7 +55,7 @@ class Data {
           Product(
               id: 2,
               title: "Kavun",
-              type: "Diyarbakır Kavunu",
+              type: "Top Kavunu",
               price: "8 TL/kg",
               summary: "Taze taze sulu sulu",
               timestamp: "12.02.2022",
@@ -65,7 +65,7 @@ class Data {
           Product(
               id: 3,
               title: "Biber",
-              type: "Diyarbakır Biberi",
+              type: "Kapya Biberi",
               price: "3 TL/kg",
               summary: "Taze taze sulu sulu",
               image:
@@ -80,7 +80,7 @@ class Data {
         summary: "Antalya'da gün içi teslimat mümkündür.",
         region: "Antalya",
         type: "Kadın Girişimci",
-        phone: "052230222303",
+        phone: "05076576321",
         image:
             'https://cdn.pixabay.com/photo/2016/07/11/19/40/eggs-1510449_960_720.jpg',
         brochure: "http://www.africau.edu/images/default/sample.pdf",
@@ -88,7 +88,7 @@ class Data {
           Product(
               id: 3,
               title: "Biber",
-              type: "Diyarbakır Biberi",
+              type: "Kapya Biber",
               price: "3 TL/kg",
               summary: "Taze taze sulu sulu",
               image:
@@ -103,7 +103,7 @@ class Data {
         summary: "Dalından sofranıza.",
         region: "Antalya",
         type: "Kadın Girişimci",
-        phone: "052430224304",
+        phone: "05076576321",
         image:
             'https://cdn.pixabay.com/photo/2016/01/02/02/03/orange-1117645_960_720.jpg',
         brochure: "http://www.africau.edu/images/default/sample.pdf",
@@ -111,7 +111,7 @@ class Data {
           Product(
               id: 5,
               title: "Portakal",
-              type: "Alanya Dilimli Portakal",
+              type: "Washington",
               price: "6 TL/kg",
               summary: "Taze taze sulu sulu",
               image:
@@ -131,7 +131,7 @@ class Data {
           Product(
               id: 7,
               title: "Mandalina",
-              type: "Klemantin Mandalina",
+              type: "Klemantin",
               price: "5 TL/kg",
               summary: "Taze taze sulu sulu",
               image:
@@ -146,7 +146,7 @@ class Data {
         region: "Antalya",
         summary: "Doğal, taze ürünler.",
         type: "Yerli Girişimci",
-        phone: "052510221303",
+        phone: "05076576321",
         image:
             'https://cdn.pixabay.com/photo/2020/05/24/15/19/flowers-quince-5214656_960_720.jpg',
         brochure: "http://www.africau.edu/images/default/sample.pdf",
@@ -189,7 +189,7 @@ class Data {
         region: "İzmir",
         summary: "Günlük ve Taze",
         type: "Yerli Girişimci",
-        phone: "05222330303",
+        phone: "05076576321",
         brochure: "http://www.africau.edu/images/default/sample.pdf",
         image:
             "https://cdn.pixabay.com/photo/2016/07/02/22/42/berries-1493905_960_720.jpg",
@@ -252,7 +252,7 @@ class Data {
         region: "İzmir",
         summary: "Ürettiğim gün bitiyor",
         type: "Pazarcı",
-        phone: "05222330303",
+        phone: "05076576321",
         brochure: "http://www.africau.edu/images/default/sample.pdf",
         image:
             "https://cdn.pixabay.com/photo/2014/09/19/19/09/man-452904_960_720.jpg",
@@ -315,7 +315,7 @@ class Data {
         region: "İzmir",
         summary: "Dikili bir fidanım var",
         type: "Çiftçi",
-        phone: "05222330303",
+        phone: "05076576321",
         brochure: "http://www.africau.edu/images/default/sample.pdf",
         image:
             "https://cdn.pixabay.com/photo/2018/02/12/09/00/the-market-3147758_960_720.jpg",
