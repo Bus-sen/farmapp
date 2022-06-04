@@ -103,11 +103,12 @@ class ContactPage extends StatelessWidget {
                   onTap: () async {
                     String text =
                         "Merhabalar, Komşu Pazar'da yer almak istiyorum!";
+                    String uriText = Uri.encodeComponent(text);
                     String telephoneNumber = '905076576321';
                     String telephoneUrl = "https://wa.me/" + telephoneNumber;
 
-                    var whatsappUrl =
-                        telephoneUrl + "&text=${Uri.encodeComponent(text)}";
+                    var whatsappUrl = telephoneUrl + "?text=" + uriText;
+
                     try {
                       launch(whatsappUrl);
                     } catch (e) {

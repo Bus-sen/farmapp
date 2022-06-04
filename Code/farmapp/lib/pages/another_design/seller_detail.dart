@@ -92,13 +92,12 @@ class _SellerDetailPageState extends State<SellerDetailPage> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           GestureDetector(
             onTap: () async {
-              String text = "Merhabalar, Komşu Pazar'dan geliyorum";
-              print("buradayım, telefon: " + globals.selectedSeller.phone);
-              String telephoneNumber = '90' + globals.selectedSeller.phone;
+              String text = "Merhabalar, Komşu Pazar'da yer almak istiyorum!";
+              String uriText = Uri.encodeComponent(text);
+              String telephoneNumber = globals.selectedSeller.phone;
               String telephoneUrl = "https://wa.me/" + telephoneNumber;
 
-              var whatsappUrl =
-                  telephoneUrl + "&text=${Uri.encodeComponent(text)}";
+              var whatsappUrl = telephoneUrl + "?text=" + uriText;
               try {
                 launch(whatsappUrl);
               } catch (e) {

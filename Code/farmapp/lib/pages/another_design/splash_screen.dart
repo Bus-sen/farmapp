@@ -26,6 +26,7 @@ class SplashScreen extends StatelessWidget {
                   children: [
                     CustomWidgets.header,
                     Container(
+                      height: MediaQuery.of(context).size.height / 2.5,
                       child: Lottie.network(
                           "https://assets3.lottiefiles.com/private_files/lf30_4lyswkde.json"),
                     ),
