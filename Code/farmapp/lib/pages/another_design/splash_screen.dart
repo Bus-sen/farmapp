@@ -24,6 +24,12 @@ class SplashScreen extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Container(
+                      child: Image.asset(
+                        "assets/images/yeni_logo.png",
+                        height: Dimensions.screenHeight / 6,
+                      ),
+                    ),
                     CustomWidgets.header,
                     Container(
                       child: Lottie.network(
@@ -39,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                               Navigator.of(context).pushNamed('homepage');
                             },
                             child: Text(
-                              "Şehir Seç",
+                              "Giriş",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: Dimensions.font20),

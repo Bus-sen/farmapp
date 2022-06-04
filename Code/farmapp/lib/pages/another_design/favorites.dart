@@ -21,7 +21,7 @@ class FavoritesPage extends StatefulWidget {
 }
 
 class _FavoritesPageState extends State<FavoritesPage> {
-  List<Seller> sellerList = Data.sellerList;
+  List<Seller> sellerList = globals.favorites;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,12 @@ class _FavoritesPageState extends State<FavoritesPage> {
             child: Lottie.network(
                 "https://assets6.lottiefiles.com/packages/lf20_sgn7zslb.json"),
           ),
-          _listviewBuilder(),
+          sellerList.length > 0
+              ? _listviewBuilder()
+              : Center(
+                  child: BigText(
+                  text: "Henüz favori bir tezgahınız bulunmamaktadır.",
+                )),
         ],
       ),
     );

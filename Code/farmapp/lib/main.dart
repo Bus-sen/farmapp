@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           splashColor: Colors.transparent,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomePage(),
+        home: SplashScreen(),
         routes: {
           'homepage': (context) => HomePage(),
           'splash': (context) => SplashScreen(),

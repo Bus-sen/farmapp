@@ -11,6 +11,7 @@ Seller selectedSeller = Seller(
     title: "",
     summary: "",
     city: "",
+    region: "",
     type: "",
     phone: "",
     brochure: "",

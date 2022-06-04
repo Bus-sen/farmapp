@@ -6,126 +6,7 @@ import 'package:farmapp/data/seller.dart';
 class Data {
   static var availableCities = [
     "Antalya",
-  ];
-
-  static List<Product> productList = [
-    Product(
-        id: 1,
-        title: "Karpuz",
-        type: "Diyarbakır Karpuzu",
-        price: "10 TL/kg",
-        summary: "Taze taze sulu sulu",
-        timestamp: "20.02.2022",
-        image: "",
-        isAvailable: true),
-    Product(
-        id: 2,
-        title: "Kavun",
-        type: "Diyarbakır Kavunu",
-        price: "8 TL/kg",
-        summary: "Taze taze sulu sulu",
-        timestamp: "12.02.2022",
-        image: "",
-        isAvailable: true),
-    Product(
-        id: 3,
-        title: "Biber",
-        type: "Diyarbakır Biberi",
-        price: "3 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 4,
-        title: "Elma",
-        type: "Amasya Elması",
-        price: "4 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 5,
-        title: "Portakal",
-        type: "Alanya Dilimli Portakal",
-        price: "6 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 6,
-        title: "Limon",
-        type: "Kıbrıs Lİmonu",
-        price: "5 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 7,
-        title: "Mandalina",
-        type: "Klemantin Mandalina",
-        price: "5 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 8,
-        title: "İncir",
-        type: "Siyah Orak İnciri",
-        price: "4 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 9,
-        title: "Ayva",
-        type: "Ekmek Ayvası",
-        price: "3 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 10,
-        title: "Kiraz",
-        type: "Turfanda Kirazı",
-        price: "5 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 11,
-        title: "Marul", https://cdn.pixabay.com/photo/2018/06/17/14/45/salad-3480650_960_720.jpg
-        type: " Manavgat Kıvırcığı",
-        price: "3 TL/adet",
-        summary: "Canlı ve taze",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 12,
-        title: "Domates", https://cdn.pixabay.com/photo/2018/07/06/08/49/tomatoes-3520004_960_720.jpg
-        type: "Kumluca Domatesi",
-        price: "4,5 TL/kg",
-        summary: "Dalından taze",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
-    Product(
-        id: 13,
-        title: "Salatalık",https://cdn.pixabay.com/photo/2016/08/12/15/33/cucumbers-1588945_960_720.jpg
-        type: "Çengelköy Salatalığı",
-        price: "5 TL/kg",
-        summary: "Taze taze sulu sulu",
-        image: "",
-        timestamp: "20.02.2022",
-        isAvailable: true),
+    "İzmir",
   ];
 
   static List<Seller> sellerList = [
@@ -133,6 +14,7 @@ class Data {
         id: 1,
         title: "Ayşe Teyze",
         city: "Serik",
+        region: "Antalya",
         summary: "Bugün bunları satıyorum",
         type: "Kadın Girişimci",
         phone: "052230303",
@@ -196,6 +78,7 @@ class Data {
         title: "Hayriye Teyze",
         city: "Alanya",
         summary: "Antalya'da gün içi teslimat mümkündür.",
+        region: "Antalya",
         type: "Kadın Girişimci",
         phone: "052230222303",
         image:
@@ -218,6 +101,7 @@ class Data {
         title: "Nurcan Hanım",
         city: "Elmalı",
         summary: "Dalından sofranıza.",
+        region: "Antalya",
         type: "Kadın Girişimci",
         phone: "052430224304",
         image:
@@ -259,6 +143,7 @@ class Data {
         id: 4,
         title: "Mehmet Amca",
         city: "Gündoğmuş",
+        region: "Antalya",
         summary: "Doğal, taze ürünler.",
         type: "Yerli Girişimci",
         phone: "052510221303",
@@ -300,7 +185,8 @@ class Data {
     Seller(
         id: 5,
         title: "Ali'nin Bahçesi",
-        city: "Manavgat",
+        city: "Ayvalık",
+        region: "İzmir",
         summary: "Günlük ve Taze",
         type: "Yerli Girişimci",
         phone: "05222330303",
@@ -308,22 +194,24 @@ class Data {
         image:
             "https://cdn.pixabay.com/photo/2018/02/12/09/00/the-market-3147758_960_720.jpg",
         products: [
-           Product(
+          Product(
               id: 11,
               title: "Marul",
               type: " Manavgat Kıvırcığı",
               price: "3 TL/adet",
               summary: "Canlı ve taze",
-              image: " https://cdn.pixabay.com/photo/2018/06/17/14/45/salad-3480650_960_720.jpg",
+              image:
+                  "https://cdn.pixabay.com/photo/2018/06/17/14/45/salad-3480650_960_720.jpg",
               timestamp: "20.02.2022",
               isAvailable: true),
           Product(
               id: 12,
-              title: "Domates", 
+              title: "Domates",
               type: "Kumluca Domatesi",
               price: "4,5 TL/kg",
               summary: "Dalından taze",
-              image: "https://cdn.pixabay.com/photo/2018/07/06/08/49/tomatoes-3520004_960_720.jpg",
+              image:
+                  "https://cdn.pixabay.com/photo/2018/07/06/08/49/tomatoes-3520004_960_720.jpg",
               timestamp: "20.02.2022",
               isAvailable: true),
           Product(
@@ -332,10 +220,11 @@ class Data {
               type: "Çengelköy Salatalığı",
               price: "5 TL/kg",
               summary: "Taze ve sulu",
-              image: "https://cdn.pixabay.com/photo/2016/08/12/15/33/cucumbers-1588945_960_720.jpg",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/08/12/15/33/cucumbers-1588945_960_720.jpg",
               timestamp: "20.02.2022",
               isAvailable: true),
-          Product(        
+          Product(
               id: 1,
               title: "Karpuz",
               type: "Diyarbakır Karpuzu",
@@ -355,7 +244,6 @@ class Data {
                   "https://cdn.pixabay.com/photo/2014/08/18/23/11/bell-peppers-421087_640.jpg",
               timestamp: "20.02.2022",
               isAvailable: false),
-
         ]),
   ];
 

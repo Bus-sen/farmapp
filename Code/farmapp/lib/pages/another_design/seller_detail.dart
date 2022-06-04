@@ -5,6 +5,7 @@ import 'package:farmapp/widgets/app_product_row.dart';
 import 'package:farmapp/widgets/app_seller_row.dart';
 import 'package:farmapp/widgets/big_text.dart';
 import 'package:farmapp/widgets/custom_widgets.dart';
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -30,20 +31,28 @@ class SellerDetailPage extends StatefulWidget {
 class _SellerDetailPageState extends State<SellerDetailPage> {
   @override
   Widget build(BuildContext context) {
+    bool isFavorite = false;
+    globals.favorites.contains(globals.selectedSeller)
+        ? (isFavorite = true)
+        : (isFavorite = false);
     return Scaffold(
       backgroundColor: AppColors.colorBackground,
       appBar: AppBar(
         backgroundColor: AppColors.colorPrimary,
         title: Text("Komşu Pazar"),
         actions: [
-          IconButton(
-            icon: Icon(
-              Icons.favorite,
-              color: AppColors.colorBackground,
-            ),
-            onPressed: () {
-              Navigator.of(context).pushNamed("favorites");
-            },
+          FavoriteButton(
+              isFavorite: isFavorite,
+              iconColor: AppColors.colorSecondary,
+              iconDisabledColor: Colors.white,
+              valueChanged: (_isFavorite) {
+                globals.favorites.contains(globals.selectedSeller)
+                    ? globals.favorites.remove(globals.selectedSeller)
+                    : globals.favorites.add(globals.selectedSeller);
+                ;
+              }),
+          SizedBox(
+            width: Dimensions.width10,
           ),
         ],
       ),

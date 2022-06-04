@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Seller {
   int id;
-  String title, summary, city, type, phone, image, brochure;
+  String title, summary, city, region, type, phone, image, brochure;
   List<Product> products;
 
   Seller(
@@ -11,6 +11,7 @@ class Seller {
       required this.title,
       required this.summary,
       required this.city,
+      required this.region,
       required this.type,
       required this.phone,
       required this.image,
