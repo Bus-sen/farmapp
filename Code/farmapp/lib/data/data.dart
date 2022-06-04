@@ -99,6 +99,33 @@ class Data {
         image: "",
         timestamp: "20.02.2022",
         isAvailable: true),
+    Product(
+        id: 11,
+        title: "Marul", https://cdn.pixabay.com/photo/2018/06/17/14/45/salad-3480650_960_720.jpg
+        type: " Manavgat Kıvırcığı",
+        price: "3 TL/adet",
+        summary: "Canlı ve taze",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 12,
+        title: "Domates", https://cdn.pixabay.com/photo/2018/07/06/08/49/tomatoes-3520004_960_720.jpg
+        type: "Kumluca Domatesi",
+        price: "4,5 TL/kg",
+        summary: "Dalından taze",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
+    Product(
+        id: 13,
+        title: "Salatalık",https://cdn.pixabay.com/photo/2016/08/12/15/33/cucumbers-1588945_960_720.jpg
+        type: "Çengelköy Salatalığı",
+        price: "5 TL/kg",
+        summary: "Taze taze sulu sulu",
+        image: "",
+        timestamp: "20.02.2022",
+        isAvailable: true),
   ];
 
   static List<Seller> sellerList = [
@@ -270,6 +297,66 @@ class Data {
               timestamp: "20.02.2022",
               isAvailable: true),
         ]),
+    Seller(
+        id: 5,
+        title: "Ali'nin Bahçesi",
+        city: "Manavgat",
+        summary: "Günlük ve Taze",
+        type: "Yerli Girişimci",
+        phone: "05222330303",
+        brochure: "http://www.africau.edu/images/default/sample.pdf",
+        image:
+            "https://cdn.pixabay.com/photo/2018/02/12/09/00/the-market-3147758_960_720.jpg",
+        products: [
+           Product(
+              id: 11,
+              title: "Marul",
+              type: " Manavgat Kıvırcığı",
+              price: "3 TL/adet",
+              summary: "Canlı ve taze",
+              image: " https://cdn.pixabay.com/photo/2018/06/17/14/45/salad-3480650_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 12,
+              title: "Domates", 
+              type: "Kumluca Domatesi",
+              price: "4,5 TL/kg",
+              summary: "Dalından taze",
+              image: "https://cdn.pixabay.com/photo/2018/07/06/08/49/tomatoes-3520004_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(
+              id: 13,
+              title: "Salatalık",
+              type: "Çengelköy Salatalığı",
+              price: "5 TL/kg",
+              summary: "Taze ve sulu",
+              image: "https://cdn.pixabay.com/photo/2016/08/12/15/33/cucumbers-1588945_960_720.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: true),
+          Product(        
+              id: 1,
+              title: "Karpuz",
+              type: "Diyarbakır Karpuzu",
+              price: "10 TL/kg",
+              summary: "Taze taze sulu sulu",
+              timestamp: "20.02.2022",
+              image:
+                  "https://cdn.pixabay.com/photo/2015/06/19/16/48/watermelon-815072_640.jpg",
+              isAvailable: true),
+          Product(
+              id: 3,
+              title: "Biber",
+              type: "Diyarbakır Biberi",
+              price: "3 TL/kg",
+              summary: "Taze taze sulu sulu",
+              image:
+                  "https://cdn.pixabay.com/photo/2014/08/18/23/11/bell-peppers-421087_640.jpg",
+              timestamp: "20.02.2022",
+              isAvailable: false),
+
+        ]),
   ];
 
   static final List<String> imagesList = [
@@ -287,5 +374,6 @@ class Data {
     ' Yumurtacı Halil ',
     ' Nurcan Hanımın Bahçesi',
     ' Mehmet Amcanın Yeri',
+    " Ali'nin Sebze & Meyve Tezgahı"
   ];
 }
