@@ -42,12 +42,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
             child: Lottie.network(
                 "https://assets6.lottiefiles.com/packages/lf20_sgn7zslb.json"),
           ),
-          sellerList.length > 0
-              ? _listviewBuilder()
-              : Center(
-                  child: BigText(
-                  text: "Henüz favori bir tezgahınız bulunmamaktadır.",
-                )),
+          sellerList.length > 0 ? _listviewBuilder() : _message(),
         ],
       ),
     );
@@ -127,5 +122,19 @@ class _FavoritesPageState extends State<FavoritesPage> {
             fit: BoxFit.cover),
       ),
     );
+  }
+}
+
+class _message extends StatelessWidget {
+  const _message({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: BigText(
+      text: "Henüz favori bir tezgahınız bulunmamaktadır.",
+    ));
   }
 }

@@ -51,6 +51,14 @@ class CustomWidgets {
   static Column header = Column(
     children: [
       Center(
+        child: Container(
+          child: Image.asset(
+            "assets/images/yeni_logo.png",
+            height: Dimensions.screenHeight / 6,
+          ),
+        ),
+      ),
+      Center(
         child: BigText(
           text: "Komşu Pazar",
           color: AppColors.colorPrimary,

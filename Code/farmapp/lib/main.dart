@@ -1,3 +1,4 @@
+import 'package:farmapp/pages/another_design/contact_us.dart';
 import 'package:farmapp/pages/another_design/favorites.dart';
 import 'package:farmapp/pages/another_design/homepage.dart';
 import 'package:farmapp/pages/another_design/pdf_viewer.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           'favorites': (context) => FavoritesPage(),
           'seller': (context) => SellerDetailPage(),
           'pdf': (context) => PDFViewerPage(),
+          'contact': (context) => ContactPage(),
         });
   }
 }

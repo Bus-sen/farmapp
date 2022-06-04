@@ -24,12 +24,6 @@ class SplashScreen extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      child: Image.asset(
-                        "assets/images/yeni_logo.png",
-                        height: Dimensions.screenHeight / 6,
-                      ),
-                    ),
                     CustomWidgets.header,
                     Container(
                       child: Lottie.network(
@@ -69,7 +63,7 @@ class SplashScreen extends StatelessWidget {
                                     ..onTap = () {
                                       //bize ulaşın sayfası oluştur
                                       Navigator.of(context)
-                                          .pushNamed('homepage');
+                                          .pushNamed('contact');
                                     }),
                             ],
                           ),

@@ -217,6 +217,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   CarouselSlider _carouselWidget() {
+    List<Seller> topSellers = [];
+    for (int i = 0; i < sellerList.length; i++) {
+      if (sellerList[i].region == globals.city) {
+        topSellers.add(sellerList[i]);
+      }
+    }
     return CarouselSlider(
       options: CarouselOptions(
         autoPlay: true,
@@ -230,7 +236,7 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-      items: Data.sellerList
+      items: topSellers
           .map(
             (item) => Padding(
               padding: const EdgeInsets.all(8.0),
@@ -252,9 +258,9 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       new GestureDetector(
                         onTap: () {
-                          globals.selectedSeller = sellerList[_currentIndex];
+                          globals.selectedSeller = topSellers[_currentIndex];
                           print("Şuna tıklandı: " +
-                              sellerList[_currentIndex].title);
+                              topSellers[_currentIndex].title);
                           Navigator.of(context).pushNamed('seller');
                         },
                         child: Image.network(
@@ -266,13 +272,13 @@ class _HomePageState extends State<HomePage> {
                       Center(
                         child: new GestureDetector(
                           onTap: () {
-                            globals.selectedSeller = sellerList[_currentIndex];
+                            globals.selectedSeller = topSellers[_currentIndex];
                             print("Şuna tıklandı: " +
-                                sellerList[_currentIndex].title);
+                                topSellers[_currentIndex].title);
                             Navigator.of(context).pushNamed('seller');
                           },
                           child: Text(
-                            '${Data.sellerList[_currentIndex].title}',
+                            '${topSellers[_currentIndex].title}',
                             style: TextStyle(
                               fontSize: Dimensions.font26,
                               fontWeight: FontWeight.bold,
