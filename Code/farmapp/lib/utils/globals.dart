@@ -3,8 +3,10 @@ library my_prj.globals;
 import 'package:farmapp/data/seller.dart';
 
 import '../data/product.dart';
+import 'dimensions.dart';
 
 String city = "Antalya";
+double imageSize = Dimensions.listViewImgSize;
 List<Seller> favorites = [];
 Seller selectedSeller = Seller(
     id: 0,

@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     String dropdownvalue = globals.city;
+    globals.imageSize = MediaQuery.of(context).size.height / 5;
     var cities = Data.availableCities;
     return Scaffold(
       backgroundColor: AppColors.colorBackground,
@@ -160,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                       _thumbnail(index),
                       Expanded(
                         child: Container(
-                          height: Dimensions.listViewImgSize,
+                          height: globals.imageSize,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(Dimensions.radius20),
@@ -201,8 +202,8 @@ class _HomePageState extends State<HomePage> {
 
   Container _thumbnail(int index) {
     return Container(
-      height: Dimensions.listViewImgSize,
-      width: Dimensions.listViewImgSize,
+      height: globals.imageSize,
+      width: globals.imageSize,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(Dimensions.radius20),

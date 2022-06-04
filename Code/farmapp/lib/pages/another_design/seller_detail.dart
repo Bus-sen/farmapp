@@ -189,7 +189,7 @@ ListView _listviewBuilder() {
               _thumbnail(productList[index].image),
               Expanded(
                 child: Container(
-                  height: Dimensions.listViewImgSize,
+                  height: globals.imageSize,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(Dimensions.radius20),
@@ -233,8 +233,8 @@ ListView _listviewBuilder() {
 
 Container _thumbnail(String image) {
   return Container(
-    height: Dimensions.listViewImgSize,
-    width: Dimensions.listViewImgSize,
+    height: globals.imageSize,
+    width: globals.imageSize,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(Dimensions.radius20),

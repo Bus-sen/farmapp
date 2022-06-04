@@ -18,7 +18,7 @@ class SmallText extends StatelessWidget {
       this.color = const Color.fromARGB(255, 104, 112, 110),
       required this.text,
       this.height = 1.2,
-      this.size = 10,
+      this.size = 12,
       this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 

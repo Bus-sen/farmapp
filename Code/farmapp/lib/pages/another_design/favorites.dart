@@ -134,7 +134,7 @@ class _message extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: BigText(
-      text: "Henüz favori bir tezgahınız bulunmamaktadır.",
+      text: "Henüz favori bir tezgahınız\nbulunmamaktadır.",
     ));
   }
 }
