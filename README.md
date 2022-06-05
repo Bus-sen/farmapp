@@ -111,7 +111,7 @@ Ekte konuşma özeti mevcuttur.
 ## Backlog
 - 8 Haziran için ürün tanıtım videosu çekilecek.
 - Ürün teslim formu doldurulacak ve teslim edilecek.
-- App storeda app indirilebilir olacak.
+- Playstore'da app indirilebilir olacak.
 
 ## Daily Scrum
 Ekte konuşma özeti mevcuttur.
