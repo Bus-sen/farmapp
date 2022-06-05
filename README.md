@@ -90,5 +90,44 @@ Ekte konuşma özeti mevcuttur.
 - Color palet constantları (1)+
 - Widgetlar (5)+
 - Header ve bottombar özellikleri ayarlanması (2)+
+
+# SPRİNT-3
+
+## Sprint Review
+- Favorileri görüntüleme sayfası eklendi.
+- Whatsapp yönlendirme düzeltildi.
+- Broşür görme düzeltildi.
+- İl seçme özelliği eklendi.
+- Marka logosu ve app ikonu bulundu.
+- App için mail ve şifre oluşturuldu.
+- Data girişleri yapıldı.
+- Kontroller yapıldı.
+
+## Sprint Retrospective
+- Toplantı 1 gün gecikmeli yapıldı.
+- Verilen sprint hedeflerine uyuldu.
+- Grup içi motivasyon ve yardımlaşma oldukça iyiydi.
+
+## Backlog
+- 8 Haziran için ürün tanıtım videosu çekilecek.
+- Ürün teslim formu doldurulacak ve teslim edilecek.
+- App storeda app indirilebilir olacak.
+
+## Daily Scrum
+Ekte konuşma özeti mevcuttur.
+
+## Puanlama
+40 puan üzerinden işlerin puanlandırılması:
+- Favorileri görüntüleme sayfası eklenmesi (5)
+- Whatsapp yönlendirme düzeltilmesi (3)
+- Broşür görme düzeltilmesi (3)
+- İl seçme özelliği eklenmesi (3)
+- Marka logosu ve app ikonu (5)
+- App için mail ve şifre (3)
+- Data girişi Esra (5)
+- Data girişi Büşra (5)
+- Data girişi Ece (5)
+- Data girişi Bahattin (3)
+40 puan üzerinden 40 puan verilmiştir.
 ## Board linki
 https://trello.com/invite/b/112WKGJS/d6dc84f8a0efd6a96227bdf6dffe38c4/komsu-pazar
